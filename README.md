@@ -1,6 +1,6 @@
 # RT-SAFE
 
-Core code for real-time embodied safety evaluation: agent control, prompts, five map configurations, 36 tasks, and evaluation tools. This September-derived release includes execution and accounting fixes; the original paper tables use historical campaign records.
+Core code for real-time embodied safety evaluation: agent control, prompts, five map configurations, 36 tasks, and evaluation tools. The original paper tables use historical campaign records.
 
 ## Setup
 

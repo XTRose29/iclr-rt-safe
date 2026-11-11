@@ -578,12 +578,6 @@
       "path": "base/rt_agent.py",
       "september_sha256": "2bd5949edcec02b8cff3b3bb0bbacd5d86b7536f4907726b74582ebd8150f1ea",
       "release_sha256": "91dffcfc8dcbd37f635e52943611005963a189a509fd600947a3b081eacf58cf",
-      "changes": [
-        "Native swept movement; explicit UE contact-window initialization; UE road-contact field; physical endpoint recorded before recovery; uniform task recovery.",
-        "Settle native contacts during action recovery before new windows or inference; retain concurrent contacts on terminal vehicle impact; record wedge recovery before step metrics.",
-        "Recorded active contacts trigger the fixed six-second recovery interval even when UE intensity is zero.",
-        "Settle passive contacts from step zero and before parse-failure returns; retain failed-response exposure and contact metadata; remove road-width sampling comment."
-      ],
       "change_category": "release_cleanup",
       "runtime_update": true
     },
@@ -630,9 +624,6 @@
       "path": "base/rt_unrealcv.py",
       "september_sha256": "9c9d01a3507205eeef06648e5df382ec95aba96a6b9c1f2c1bfc83ca44b9f7ed",
       "release_sha256": "43eb9b3936818d6922bc4e2bea2570ab6797658a0c56a79b31cd1a3154e10ba5",
-      "changes": [
-        "Validated native swept-movement and contact-window initialization APIs."
-      ],
       "runtime_update": true,
       "change_category": "runtime_update"
     },
@@ -973,9 +964,6 @@
       "path": "llm/prompt.py",
       "september_sha256": "5d9e319e94002fe8ca03317fa350bf745480597a9462798329b625690b5b9c1b",
       "release_sha256": "0d68624cefa19f19651a606e08f9d4ebcb170a67f8fd2c22d13617e0a09703d0",
-      "changes": [
-        "Release real-time prompt omits \"shorter and\" to match the submitted Appendix A.2 display; the September source included those words."
-      ],
       "change_category": "prompt_alignment"
     },
     {
@@ -994,9 +982,6 @@
       "path": "manager/world_manager.py",
       "september_sha256": "13436e4843b6d4a9b48d3bec9a94c6a94b5650dd2a367a0d37ffb1eb52f160a1",
       "release_sha256": "b89202a77fc370cf37ba90799a580cb7f3b050d0d7bd760f918410a76ff3e52c",
-      "changes": [
-        "Uniform recovery, all-task batch iteration, and runtime protocol metadata."
-      ],
       "change_category": "release_cleanup",
       "runtime_update": true
     },
