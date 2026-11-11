@@ -1,0 +1,1085 @@
+{
+  "base_commit": "1850d8a8cadef025b2760c7ac053a2b70312081b",
+  "source": "September paper campaign snapshot, including saved paper-era local fixes",
+  "scope": "Source ancestry and release file integrity; runtime includes later fixes.",
+  "limitation": "Historical paper tables use their original campaign records, not outputs of the updated release.",
+  "files": [
+    {
+      "path": "SimWorld/LICENSE",
+      "september_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "release_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/__init__.py",
+      "september_sha256": "748bd7a12e58376953d4498dd98b44be7b13e314317be96b867e93a2af5b32ab",
+      "release_sha256": "748bd7a12e58376953d4498dd98b44be7b13e314317be96b867e93a2af5b32ab",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/agent/__init__.py",
+      "september_sha256": "6bd7f41e96bfaa974b5998ae9df7d97df095b03f641808026962948e689417ed",
+      "release_sha256": "6bd7f41e96bfaa974b5998ae9df7d97df095b03f641808026962948e689417ed",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/agent/base_agent.py",
+      "september_sha256": "e9ce83b787a7eb9435b4c5b0ccb82eed9c120bf2957ec5373b56509b03ccacd3",
+      "release_sha256": "e9ce83b787a7eb9435b4c5b0ccb82eed9c120bf2957ec5373b56509b03ccacd3",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/agent/humanoid.py",
+      "september_sha256": "3d9dd5f8635633c1b361e26d16593271d173147d113c9d317fce3360fb9b3aca",
+      "release_sha256": "3d9dd5f8635633c1b361e26d16593271d173147d113c9d317fce3360fb9b3aca",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/agent/pedestrian.py",
+      "september_sha256": "e4d063d9e5e969fc2797c172e36f099c660a89b1fdae91d5330e5c03cef1e142",
+      "release_sha256": "e4d063d9e5e969fc2797c172e36f099c660a89b1fdae91d5330e5c03cef1e142",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/agent/scooter.py",
+      "september_sha256": "c1c9a02d7dab4fa7eedbdb832762d72a432c0fd8b3a84d85ad21bce6ecc7c7cb",
+      "release_sha256": "c1c9a02d7dab4fa7eedbdb832762d72a432c0fd8b3a84d85ad21bce6ecc7c7cb",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/agent/vehicle.py",
+      "september_sha256": "9c26b028d01dddaa45bdb9a36a7593255c4ea52fbf87a562240fa344eb8409a8",
+      "release_sha256": "9c26b028d01dddaa45bdb9a36a7593255c4ea52fbf87a562240fa344eb8409a8",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/assets_rp/AssetsRP.py",
+      "september_sha256": "65f8547943c04357baff44d23ebbb961d8f109f5b9c2970c132460a8500df114",
+      "release_sha256": "65f8547943c04357baff44d23ebbb961d8f109f5b9c2970c132460a8500df114",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/assets_rp/__init__.py",
+      "september_sha256": "3eeac0c259b851cb8dbbbb8414a2e6a5d5fe8bf857e77211b8a50f1f97e8e3c5",
+      "release_sha256": "3eeac0c259b851cb8dbbbb8414a2e6a5d5fe8bf857e77211b8a50f1f97e8e3c5",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/assets_rp/prompt/__init__.py",
+      "september_sha256": "b448875359ac17e24a77920bff00dab4b25eb91bcbfc13f418a101310f5f521b",
+      "release_sha256": "b448875359ac17e24a77920bff00dab4b25eb91bcbfc13f418a101310f5f521b",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/assets_rp/prompt/retrieval_input_prompt.py",
+      "september_sha256": "058c09124c2cdad0f9a9861f63ebea948b3b5e970dd64299033cc9e2c612372a",
+      "release_sha256": "058c09124c2cdad0f9a9861f63ebea948b3b5e970dd64299033cc9e2c612372a",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/assets_rp/utils/assets_rp_utils.py",
+      "september_sha256": "11d51fc8d93e0a9278a62f609bc4842ad23fddf610cb80cb48f621c7c2d84da1",
+      "release_sha256": "11d51fc8d93e0a9278a62f609bc4842ad23fddf610cb80cb48f621c7c2d84da1",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/assets_rp/utils/clip_embedder.py",
+      "september_sha256": "34cd12e9e7aa1df0501263e25555116d8f42a6e9d24300857d76902950371f51",
+      "release_sha256": "34cd12e9e7aa1df0501263e25555116d8f42a6e9d24300857d76902950371f51",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/assets_rp/utils/input_parser.py",
+      "september_sha256": "e84dc5889ad0fea3034c11f1b09eba3f2c99a592c06bf170a7d978c483211db6",
+      "release_sha256": "e84dc5889ad0fea3034c11f1b09eba3f2c99a592c06bf170a7d978c483211db6",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/assets_rp/utils/reference_assets_retriever.py",
+      "september_sha256": "a352c49d00dffddb116a98e13920c19c169f1e2d8c87632a49d13f0bb7227afd",
+      "release_sha256": "a352c49d00dffddb116a98e13920c19c169f1e2d8c87632a49d13f0bb7227afd",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/__init__.py",
+      "september_sha256": "67662253ac3e50c307a37b73430670395c4ef0383daba7c34109a7269b999781",
+      "release_sha256": "67662253ac3e50c307a37b73430670395c4ef0383daba7c34109a7269b999781",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/building/__init__.py",
+      "september_sha256": "6370ab316bdd7386d93a307ac63a055832487512dfb70556a8083fe1cbd266c2",
+      "release_sha256": "6370ab316bdd7386d93a307ac63a055832487512dfb70556a8083fe1cbd266c2",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/building/building_generator.py",
+      "september_sha256": "454b7fb9a94579166689de956e49b21333f51e82a761f2acb4c046c2e09a5351",
+      "release_sha256": "454b7fb9a94579166689de956e49b21333f51e82a761f2acb4c046c2e09a5351",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/building/building_manager.py",
+      "september_sha256": "2a80bc7974d733d03de7c8b06e593b070f2af07c95ab90a4b5922758da24507f",
+      "release_sha256": "2a80bc7974d733d03de7c8b06e593b070f2af07c95ab90a4b5922758da24507f",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/city/__init__.py",
+      "september_sha256": "082be6aeced149e794f18d3d92ece5e58c3e38bed98ffbc1c92dae5d3e60bfae",
+      "release_sha256": "082be6aeced149e794f18d3d92ece5e58c3e38bed98ffbc1c92dae5d3e60bfae",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/city/city_generator.py",
+      "september_sha256": "198771ab8a9eccf49e0539fd291f2a8dbd6fa9ab707e7a4627c28317de746487",
+      "release_sha256": "198771ab8a9eccf49e0539fd291f2a8dbd6fa9ab707e7a4627c28317de746487",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/dataclass/__init__.py",
+      "september_sha256": "7571464f736629f6c9e3a30ac2c16111a8ad983f80c54a5dcd34170e4acb407a",
+      "release_sha256": "7571464f736629f6c9e3a30ac2c16111a8ad983f80c54a5dcd34170e4acb407a",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/dataclass/dataclass.py",
+      "september_sha256": "7032bc1b3a63b1f7e60483c9fa813eed5ad33530c4496e29c45b06da5f80e82c",
+      "release_sha256": "7032bc1b3a63b1f7e60483c9fa813eed5ad33530c4496e29c45b06da5f80e82c",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/element/__init__.py",
+      "september_sha256": "247befee8a7db91623ce4d88c615e973e50aaf9635bb55f810c86bc9e79c43fe",
+      "release_sha256": "247befee8a7db91623ce4d88c615e973e50aaf9635bb55f810c86bc9e79c43fe",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/element/element_generator.py",
+      "september_sha256": "d46320a0dad8f7ded49083702381bb6067b6c910996cbb9a28c7d7e40d96c0a7",
+      "release_sha256": "d46320a0dad8f7ded49083702381bb6067b6c910996cbb9a28c7d7e40d96c0a7",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/element/element_manager.py",
+      "september_sha256": "638c614b2ee96790c038d8f9c1bc7e3fac96d6e8e30837a118ccca360050b77d",
+      "release_sha256": "638c614b2ee96790c038d8f9c1bc7e3fac96d6e8e30837a118ccca360050b77d",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/function_call/__init__.py",
+      "september_sha256": "326ceaad7478a3529ca06a1bc735a241371424ddbb9c3d506cfc77471a86c807",
+      "release_sha256": "326ceaad7478a3529ca06a1bc735a241371424ddbb9c3d506cfc77471a86c807",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/function_call/city_function_call.py",
+      "september_sha256": "3507b610ac32cabda0660c869839e0b1e90d8c206f64b5f33053de745ea87e24",
+      "release_sha256": "3507b610ac32cabda0660c869839e0b1e90d8c206f64b5f33053de745ea87e24",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/render/__init__.py",
+      "september_sha256": "2213e9c24d84e294c321307e17f09462368693d8caaedf2224f47b0a9707dd61",
+      "release_sha256": "2213e9c24d84e294c321307e17f09462368693d8caaedf2224f47b0a9707dd61",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/render/visualization.py",
+      "september_sha256": "1a22541d70e1f564c60982607846710fb5a8a69a9e3a88ee790c69b0d6198d74",
+      "release_sha256": "1a22541d70e1f564c60982607846710fb5a8a69a9e3a88ee790c69b0d6198d74",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/road/__init__.py",
+      "september_sha256": "09aaf1e039a9f770338576f7770cc8742f6cc57b57dbc84a9c473484345b8779",
+      "release_sha256": "09aaf1e039a9f770338576f7770cc8742f6cc57b57dbc84a9c473484345b8779",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/road/road_generator.py",
+      "september_sha256": "201ecb4eaf3612a4379844feaf9fd7ce55a18adb51a753742c1ab260879ce10c",
+      "release_sha256": "201ecb4eaf3612a4379844feaf9fd7ce55a18adb51a753742c1ab260879ce10c",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/road/road_manager.py",
+      "september_sha256": "f24e36251344bc54769b507d753ab0ce73792c663c2aa3bafd58ccd63082faab",
+      "release_sha256": "f24e36251344bc54769b507d753ab0ce73792c663c2aa3bafd58ccd63082faab",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/route/__init__.py",
+      "september_sha256": "6910784603dddc2890df56357aeb9fff62fada1e2d44534908c1e47438d2e5d7",
+      "release_sha256": "6910784603dddc2890df56357aeb9fff62fada1e2d44534908c1e47438d2e5d7",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/route/route_generator.py",
+      "september_sha256": "9d5008ac307daf10b8dd08b353a92875b4d8958e52b41af5b374c27e22db56cc",
+      "release_sha256": "9d5008ac307daf10b8dd08b353a92875b4d8958e52b41af5b374c27e22db56cc",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/citygen/route/route_manager.py",
+      "september_sha256": "b93a81af5719e59a560a91f45762f8fac850452dfb224308e9c1aaae37ec92d0",
+      "release_sha256": "b93a81af5719e59a560a91f45762f8fac850452dfb224308e9c1aaae37ec92d0",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/communicator/__init__.py",
+      "september_sha256": "a34289085a949b08f1d371c6e9c6c2317c7c68038ba1ce76374a4791ff6019ab",
+      "release_sha256": "a34289085a949b08f1d371c6e9c6c2317c7c68038ba1ce76374a4791ff6019ab",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/communicator/communicator.py",
+      "september_sha256": "ed0ab204e1ad7f06204cbc3879dc358baad5d76d7c074dca423dc3e6adc231c2",
+      "release_sha256": "ed0ab204e1ad7f06204cbc3879dc358baad5d76d7c074dca423dc3e6adc231c2",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/communicator/unrealcv.py",
+      "september_sha256": "f89118314c6ae91e6dff7fb1723aa214f3c8426816c74aaf6cf8d06279bf28d3",
+      "release_sha256": "f89118314c6ae91e6dff7fb1723aa214f3c8426816c74aaf6cf8d06279bf28d3",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/config/__init__.py",
+      "september_sha256": "7f26554c1dabb0e553e642af2df5f0762a0b5b44aaa975624f92c8aa0cf76fca",
+      "release_sha256": "7f26554c1dabb0e553e642af2df5f0762a0b5b44aaa975624f92c8aa0cf76fca",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/config/config_loader.py",
+      "september_sha256": "12ae3925512480c163229a99b5662010bcaa08085f0ce379b96c321d823d8743",
+      "release_sha256": "12ae3925512480c163229a99b5662010bcaa08085f0ce379b96c321d823d8743",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/config/default.yaml",
+      "september_sha256": "b50684a467ad673adfb1ea47938633b18e2ebf37385547c685932c45044f4b7d",
+      "release_sha256": "b50684a467ad673adfb1ea47938633b18e2ebf37385547c685932c45044f4b7d",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/data/Bbox.json",
+      "september_sha256": "19ad55c41109bd5f680e8b56503e3ce88169c9b6e8cf5282af68624b01bad61a",
+      "release_sha256": "19ad55c41109bd5f680e8b56503e3ce88169c9b6e8cf5282af68624b01bad61a",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/data/__init__.py",
+      "september_sha256": "479e2f25b5db2bcaf2d92aee9449c1b425a2355a377614f9fa92df3bba8f71cb",
+      "release_sha256": "479e2f25b5db2bcaf2d92aee9449c1b425a2355a377614f9fa92df3bba8f71cb",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/data/description_map.json",
+      "september_sha256": "686240144a173ebf48c427a5e970086bc1c9440ea00b49ba8042603774ab3fab",
+      "release_sha256": "686240144a173ebf48c427a5e970086bc1c9440ea00b49ba8042603774ab3fab",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/data/predefined_roads.json",
+      "september_sha256": "4f13e792e8f15492892958579e675cc7a33161cba67ce08b3282e023f4638656",
+      "release_sha256": "4f13e792e8f15492892958579e675cc7a33161cba67ce08b3282e023f4638656",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/data/progen_world.json",
+      "september_sha256": "38e939e4d3a78f94a5f3e2f9631bffd7ab42ad483fa191347a0c08e469f80476",
+      "release_sha256": "38e939e4d3a78f94a5f3e2f9631bffd7ab42ad483fa191347a0c08e469f80476",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/data/roads.json",
+      "september_sha256": "8dc7dd2415934ea3dd3e96ad63a74531dfc7605e21f779587d10508dfef1e910",
+      "release_sha256": "8dc7dd2415934ea3dd3e96ad63a74531dfc7605e21f779587d10508dfef1e910",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/data/ue_assets.json",
+      "september_sha256": "539aa7497e90a746b2a1816d491fb3411dd35e048a11e82868a667755f89c8fb",
+      "release_sha256": "539aa7497e90a746b2a1816d491fb3411dd35e048a11e82868a667755f89c8fb",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/data/vehicle_types.json",
+      "september_sha256": "0f2ffd14573565223f282caa42ebc007ba96b6888f7c2b059f479912105186a1",
+      "release_sha256": "0f2ffd14573565223f282caa42ebc007ba96b6888f7c2b059f479912105186a1",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/llm/__init__.py",
+      "september_sha256": "83d175e6872d9f844cc42e1f0ce2389ceb5eebe5a7e4cadb9445cc06018ff2c7",
+      "release_sha256": "83d175e6872d9f844cc42e1f0ce2389ceb5eebe5a7e4cadb9445cc06018ff2c7",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/llm/a2a_llm.py",
+      "september_sha256": "9bf8acaf956ce5add1fa4ce2e49ecb94a404657f3ab18364f51e16226bcd9596",
+      "release_sha256": "9bf8acaf956ce5add1fa4ce2e49ecb94a404657f3ab18364f51e16226bcd9596",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/llm/base_llm.py",
+      "september_sha256": "c3b353181554acc88955f03c3974241c7884d16e98f64efac25deb2c0060c274",
+      "release_sha256": "c3b353181554acc88955f03c3974241c7884d16e98f64efac25deb2c0060c274",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/llm/retry.py",
+      "september_sha256": "209726ee7192cc7e47be7dd6ab2ff5927dc3de649d182da053b614182768af42",
+      "release_sha256": "209726ee7192cc7e47be7dd6ab2ff5927dc3de649d182da053b614182768af42",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/local_planner/__init__.py",
+      "september_sha256": "d7b917418e5fb696ad98d4ef64e629e892e7e89b4b657ebc14b8dadcb2c67198",
+      "release_sha256": "d7b917418e5fb696ad98d4ef64e629e892e7e89b4b657ebc14b8dadcb2c67198",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/local_planner/action_space.py",
+      "september_sha256": "0ba2d11ac7ec1abfc51b8ed47d5be043df7c946929fdcb45f03d6d92109d452c",
+      "release_sha256": "0ba2d11ac7ec1abfc51b8ed47d5be043df7c946929fdcb45f03d6d92109d452c",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/local_planner/local_planner.py",
+      "september_sha256": "fa6d747b526ff784ace4c43871c92e21a5053b9ea3a10e630a2a8a7bdea53edc",
+      "release_sha256": "fa6d747b526ff784ace4c43871c92e21a5053b9ea3a10e630a2a8a7bdea53edc",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/local_planner/prompt/__init__.py",
+      "september_sha256": "b49e0b50afd728aae1d1b04cc9a1d57d8ae3abedcde22aacafe01804bd3b993c",
+      "release_sha256": "b49e0b50afd728aae1d1b04cc9a1d57d8ae3abedcde22aacafe01804bd3b993c",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/local_planner/prompt/prompt.py",
+      "september_sha256": "7022911746186fc8c8a388be9883723760ddff753f2f65c2f87becc7a109cafe",
+      "release_sha256": "7022911746186fc8c8a388be9883723760ddff753f2f65c2f87becc7a109cafe",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/map/__init__.py",
+      "september_sha256": "e79588cca3f6ba3453357bd5090c334ddbbb387951a412d4f32344d9a9b22a51",
+      "release_sha256": "e79588cca3f6ba3453357bd5090c334ddbbb387951a412d4f32344d9a9b22a51",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/map/map.py",
+      "september_sha256": "4bc132d3237e7b4e9658dcb3bd246d823c21dde4ad9aa845666673a9b82159e1",
+      "release_sha256": "4bc132d3237e7b4e9658dcb3bd246d823c21dde4ad9aa845666673a9b82159e1",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/__init__.py",
+      "september_sha256": "52d5bafc19fc9daadd4368ec02c3fe6669ffe0bc1f00cc576046121d20743de7",
+      "release_sha256": "52d5bafc19fc9daadd4368ec02c3fe6669ffe0bc1f00cc576046121d20743de7",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/ad_algorithm/__init__.py",
+      "september_sha256": "cf5e930522f888ea91b75b84ca000c44da7f6c3e9fbd6674e4b8a9b32a5abe64",
+      "release_sha256": "cf5e930522f888ea91b75b84ca000c44da7f6c3e9fbd6674e4b8a9b32a5abe64",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/ad_algorithm/pid_controller.py",
+      "september_sha256": "9d6987bb0810a40b402076efad210a5a4607f315ffbea903fdaa9e60bcfbba06",
+      "release_sha256": "9d6987bb0810a40b402076efad210a5a4607f315ffbea903fdaa9e60bcfbba06",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/base/__init__.py",
+      "september_sha256": "d12acb93ae8cca1a69ae32c6913a46dc898b2ce1a31afd6ec963c9dba6589d0b",
+      "release_sha256": "d12acb93ae8cca1a69ae32c6913a46dc898b2ce1a31afd6ec963c9dba6589d0b",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/base/crosswalk.py",
+      "september_sha256": "ef6b38518a3b687f27ad7a4c785f7d3b6cdf0dcd7b8dc43fcb74ff89de6491a0",
+      "release_sha256": "ef6b38518a3b687f27ad7a4c785f7d3b6cdf0dcd7b8dc43fcb74ff89de6491a0",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/base/intersection.py",
+      "september_sha256": "178ac9756942a3a87b65ddb1f20e734b45710219c826f0abedd16404814474db",
+      "release_sha256": "178ac9756942a3a87b65ddb1f20e734b45710219c826f0abedd16404814474db",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/base/road.py",
+      "september_sha256": "81ffc84589ccb7deedc51dcdc1fbc82a90855e500fd48eafc8908d1e067257fa",
+      "release_sha256": "81ffc84589ccb7deedc51dcdc1fbc82a90855e500fd48eafc8908d1e067257fa",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/base/sidewalk.py",
+      "september_sha256": "f972319ca881494c7db38ffcf1d6916c416da35244047fc5a5341ae27dd5e33a",
+      "release_sha256": "f972319ca881494c7db38ffcf1d6916c416da35244047fc5a5341ae27dd5e33a",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/base/traffic_lane.py",
+      "september_sha256": "f6f5d5df06d2b8e9ce5e6eea3a55e8244617ca957f0c1f06af925532aa8639ce",
+      "release_sha256": "f6f5d5df06d2b8e9ce5e6eea3a55e8244617ca957f0c1f06af925532aa8639ce",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/base/traffic_signal.py",
+      "september_sha256": "4f0f9325d64732b289075dba2c7a935e43d60985b2580292a71efc28a9f00e9e",
+      "release_sha256": "4f0f9325d64732b289075dba2c7a935e43d60985b2580292a71efc28a9f00e9e",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/controller/__init__.py",
+      "september_sha256": "4c5b6551419dbd6ebda64d5f09380f101ae3072d67a86e51a8260a7e21903e98",
+      "release_sha256": "4c5b6551419dbd6ebda64d5f09380f101ae3072d67a86e51a8260a7e21903e98",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/controller/traffic_controller.py",
+      "september_sha256": "d8b94749e19f1a81067d4a39bf077f5e5014b85e808cff34c4bd854e038c0179",
+      "release_sha256": "d8b94749e19f1a81067d4a39bf077f5e5014b85e808cff34c4bd854e038c0179",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/manager/__init__.py",
+      "september_sha256": "d354266d95e104249768a7fd100b1c7d3a1203dcefcf1ea5c163038ac20a4390",
+      "release_sha256": "d354266d95e104249768a7fd100b1c7d3a1203dcefcf1ea5c163038ac20a4390",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/manager/intersection_manager.py",
+      "september_sha256": "2543c33d1711cdba85749bb5d583077ea40231ee86cc1e00b5d6a343e8a6f830",
+      "release_sha256": "2543c33d1711cdba85749bb5d583077ea40231ee86cc1e00b5d6a343e8a6f830",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/manager/pedestrian_manager.py",
+      "september_sha256": "6591e6d1e6be90c51c1405f27102ef1ac4c37b4d06ef8d20bbe011f6f1fb6273",
+      "release_sha256": "6591e6d1e6be90c51c1405f27102ef1ac4c37b4d06ef8d20bbe011f6f1fb6273",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/traffic/manager/vehicle_manager.py",
+      "september_sha256": "2a1d3a6d39a1c5c77840f2c6a07e58a8b3a00a066612568d228c8b12201fc1d0",
+      "release_sha256": "2a1d3a6d39a1c5c77840f2c6a07e58a8b3a00a066612568d228c8b12201fc1d0",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/utils/__init__.py",
+      "september_sha256": "247ca4b2c9dd227f33ac397c7fafc26194db911daac1209cdb7069f558ddb10b",
+      "release_sha256": "247ca4b2c9dd227f33ac397c7fafc26194db911daac1209cdb7069f558ddb10b",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/utils/bbox_utils.py",
+      "september_sha256": "b268069cb4905f7677b3c5c81dcf92a0796d5e64b0bb6ecc408e1f9a6ee310b3",
+      "release_sha256": "b268069cb4905f7677b3c5c81dcf92a0796d5e64b0bb6ecc408e1f9a6ee310b3",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/utils/data_exporter.py",
+      "september_sha256": "af78b1a83fcb1032af7967f819a493096c70a30fb4c7ceadc7bd189f0ea152d6",
+      "release_sha256": "af78b1a83fcb1032af7967f819a493096c70a30fb4c7ceadc7bd189f0ea152d6",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/utils/data_importer.py",
+      "september_sha256": "cf81af53ade6c5ae1e199074b05ebfa2b4a42f1f0ad045d6d12a0c2b6c25fdff",
+      "release_sha256": "cf81af53ade6c5ae1e199074b05ebfa2b4a42f1f0ad045d6d12a0c2b6c25fdff",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/utils/get_bbox.py",
+      "september_sha256": "a3342bed368db9d44c3481a0292f16abd1efb3f1c31548f05b021373277e57b1",
+      "release_sha256": "a3342bed368db9d44c3481a0292f16abd1efb3f1c31548f05b021373277e57b1",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/utils/load_json.py",
+      "september_sha256": "015fd3392114c9b0f69ec9e9dcbfe42e7d96c7fdc71115be0ff013ba2db60889",
+      "release_sha256": "015fd3392114c9b0f69ec9e9dcbfe42e7d96c7fdc71115be0ff013ba2db60889",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/utils/logger.py",
+      "september_sha256": "01a462dc2bd5ab1d4f0d8ee197912fd26994641b3fad1609a336ae089cdc8382",
+      "release_sha256": "01a462dc2bd5ab1d4f0d8ee197912fd26994641b3fad1609a336ae089cdc8382",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/utils/math_utils.py",
+      "september_sha256": "466216b3cc0b0ad9126da12ea05f054846a6cdf6af7b91e91bc69a5103306bb5",
+      "release_sha256": "466216b3cc0b0ad9126da12ea05f054846a6cdf6af7b91e91bc69a5103306bb5",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/utils/priority_queue.py",
+      "september_sha256": "245bb1bfd59766b996471045c298c30212faaedc274b76b7a441e9f982da428c",
+      "release_sha256": "245bb1bfd59766b996471045c298c30212faaedc274b76b7a441e9f982da428c",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/utils/quadtree.py",
+      "september_sha256": "a1eca09fa5b34967028735284ea1f0acedbbe81f4edfb5168e0a7ec2c7dca6fa",
+      "release_sha256": "a1eca09fa5b34967028735284ea1f0acedbbe81f4edfb5168e0a7ec2c7dca6fa",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/utils/road_utils.py",
+      "september_sha256": "1207d35c94ea752d445366db77f1ff17789de31ea6ab470234f49d6ce460785d",
+      "release_sha256": "1207d35c94ea752d445366db77f1ff17789de31ea6ab470234f49d6ce460785d",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/utils/traffic_utils.py",
+      "september_sha256": "d35f1b0614683a807283b01b1381901f2e557ff0c1f4cb949d49ac0a591a1a40",
+      "release_sha256": "d35f1b0614683a807283b01b1381901f2e557ff0c1f4cb949d49ac0a591a1a40",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/utils/vector.py",
+      "september_sha256": "5996414b2fe5f5fe9bbe09cec20d836e9f847d3e47890d4178d29d2215ba44c5",
+      "release_sha256": "5996414b2fe5f5fe9bbe09cec20d836e9f847d3e47890d4178d29d2215ba44c5",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/weather/__init__.py",
+      "september_sha256": "1ea10dda4afcdbf0bb409c17c0159f3a7c7945bc32fe40ad647a0993c4d189f9",
+      "release_sha256": "1ea10dda4afcdbf0bb409c17c0159f3a7c7945bc32fe40ad647a0993c4d189f9",
+      "changes": []
+    },
+    {
+      "path": "SimWorld/simworld/weather/weather_manager.py",
+      "september_sha256": "57a6f295f989db72868c5cf930a50c6d7133277456e0fb59e4761910b3c17fd4",
+      "release_sha256": "57a6f295f989db72868c5cf930a50c6d7133277456e0fb59e4761910b3c17fd4",
+      "changes": []
+    },
+    {
+      "path": "base/human_control_interface.py",
+      "september_sha256": "001c32a317019d855c230f034b031baf7589a3ffe3b3d149e9c9f6bca8fb6580",
+      "release_sha256": "001c32a317019d855c230f034b031baf7589a3ffe3b3d149e9c9f6bca8fb6580",
+      "changes": []
+    },
+    {
+      "path": "base/rt_action_space.py",
+      "september_sha256": "f11e8d1eefb3f7bcf883dcd6a8ba7d02a52cee9b5606e3a2d5bd495123d2df22",
+      "release_sha256": "f11e8d1eefb3f7bcf883dcd6a8ba7d02a52cee9b5606e3a2d5bd495123d2df22",
+      "changes": []
+    },
+    {
+      "path": "base/rt_agent.py",
+      "september_sha256": "2bd5949edcec02b8cff3b3bb0bbacd5d86b7536f4907726b74582ebd8150f1ea",
+      "release_sha256": "91dffcfc8dcbd37f635e52943611005963a189a509fd600947a3b081eacf58cf",
+      "changes": [
+        "Native swept movement; explicit UE contact-window initialization; UE road-contact field; physical endpoint recorded before recovery; uniform task recovery.",
+        "Settle native contacts during action recovery before new windows or inference; retain concurrent contacts on terminal vehicle impact; record wedge recovery before step metrics.",
+        "Recorded active contacts trigger the fixed six-second recovery interval even when UE intensity is zero.",
+        "Settle passive contacts from step zero and before parse-failure returns; retain failed-response exposure and contact metadata; remove road-width sampling comment."
+      ],
+      "change_category": "release_cleanup",
+      "runtime_update": true
+    },
+    {
+      "path": "base/rt_communicator.py",
+      "september_sha256": "c1bbef43d4e53966b0f34e7d789821f57b9b91902b9fc2fadda1935c8c6c3f20",
+      "release_sha256": "c1bbef43d4e53966b0f34e7d789821f57b9b91902b9fc2fadda1935c8c6c3f20",
+      "changes": []
+    },
+    {
+      "path": "base/rt_evaluator.py",
+      "september_sha256": "0d8b19c549d83db7fdb86c6b4770e97725622529e70e2b27d9788a61a5b922d4",
+      "release_sha256": "0d8b19c549d83db7fdb86c6b4770e97725622529e70e2b27d9788a61a5b922d4",
+      "changes": []
+    },
+    {
+      "path": "base/rt_pedestrian.py",
+      "september_sha256": "af45ab9801f4ff263a913da0c7666bd6da9902bb0f471f5810775f32f15f15ef",
+      "release_sha256": "af45ab9801f4ff263a913da0c7666bd6da9902bb0f471f5810775f32f15f15ef",
+      "changes": []
+    },
+    {
+      "path": "base/rt_scooter.py",
+      "september_sha256": "7eee0632f0820ed985369b9d0b63dec4f6bc65a7bd490613425150e6558f245f",
+      "release_sha256": "7eee0632f0820ed985369b9d0b63dec4f6bc65a7bd490613425150e6558f245f",
+      "changes": []
+    },
+    {
+      "path": "base/rt_traffic_controller.py",
+      "september_sha256": "cdf47e85c4ad00285aff562f8ede1efce67213c8dedddb9a29f7423d3937e657",
+      "release_sha256": "bee579b6e00d490241c6c0ed60f76540cae69f57663915f9bb53c5710cd4f69c",
+      "changes": [
+        "Documentation only: describe route-crosswalk resolution without a task-number example."
+      ],
+      "change_category": "release_cleanup"
+    },
+    {
+      "path": "base/rt_traffic_system.py",
+      "september_sha256": "51a5354257c30b84c69254302f42cbab904f93d6fb89e81ff5d965f7d18c2e5a",
+      "release_sha256": "51a5354257c30b84c69254302f42cbab904f93d6fb89e81ff5d965f7d18c2e5a",
+      "changes": []
+    },
+    {
+      "path": "base/rt_unrealcv.py",
+      "september_sha256": "9c9d01a3507205eeef06648e5df382ec95aba96a6b9c1f2c1bfc83ca44b9f7ed",
+      "release_sha256": "43eb9b3936818d6922bc4e2bea2570ab6797658a0c56a79b31cd1a3154e10ba5",
+      "changes": [
+        "Validated native swept-movement and contact-window initialization APIs."
+      ],
+      "runtime_update": true,
+      "change_category": "runtime_update"
+    },
+    {
+      "path": "config.yaml",
+      "september_sha256": "ad5fe9118cc6728c5354a31ff697cbdd160c80ae2df593d01d1641a5cbc6c668",
+      "release_sha256": "ad5fe9118cc6728c5354a31ff697cbdd160c80ae2df593d01d1641a5cbc6c668",
+      "changes": []
+    },
+    {
+      "path": "data/all_tasks.json",
+      "september_sha256": "9ee5993bb150c078a5fc968255a7bdeee0fba0bdab990b8231bf460b7d4ef79b",
+      "release_sha256": "9ee5993bb150c078a5fc968255a7bdeee0fba0bdab990b8231bf460b7d4ef79b",
+      "changes": []
+    },
+    {
+      "path": "data/bbox.json",
+      "september_sha256": "9b07c2ef342956966380d35083633324681f98640c163a5c5ddda93f19e36585",
+      "release_sha256": "9b07c2ef342956966380d35083633324681f98640c163a5c5ddda93f19e36585",
+      "changes": []
+    },
+    {
+      "path": "data/map1_10roads/buildings.json",
+      "september_sha256": "20f8778447adc64cd548b5598aaf64abc7445d89d24eaade21e20eccd77e07a5",
+      "release_sha256": "20f8778447adc64cd548b5598aaf64abc7445d89d24eaade21e20eccd77e07a5",
+      "changes": []
+    },
+    {
+      "path": "data/map1_10roads/elements.json",
+      "september_sha256": "c2c1c50957e5057bf8fe1384e9e841bdd1288c590d3f3813cc65c856abcb4998",
+      "release_sha256": "c2c1c50957e5057bf8fe1384e9e841bdd1288c590d3f3813cc65c856abcb4998",
+      "changes": []
+    },
+    {
+      "path": "data/map1_10roads/obstacles.json",
+      "september_sha256": "735a2a56ecfb46c67a77983a21f606c0197fdf7702007572bd05e24a6e7ac81a",
+      "release_sha256": "735a2a56ecfb46c67a77983a21f606c0197fdf7702007572bd05e24a6e7ac81a",
+      "changes": []
+    },
+    {
+      "path": "data/map1_10roads/progen_world.json",
+      "september_sha256": "8342e130be878a7bafe82bb9ad1b125ce9561a210194921847da3578406cec12",
+      "release_sha256": "8342e130be878a7bafe82bb9ad1b125ce9561a210194921847da3578406cec12",
+      "changes": []
+    },
+    {
+      "path": "data/map1_10roads/roads.json",
+      "september_sha256": "0ffd2751c9e37c9d4bb21930ee275f180f405b46d6ee1a85ddda52ab43efaa4b",
+      "release_sha256": "0ffd2751c9e37c9d4bb21930ee275f180f405b46d6ee1a85ddda52ab43efaa4b",
+      "changes": []
+    },
+    {
+      "path": "data/map1_10roads/routes.json",
+      "september_sha256": "a19a5b11416f0259d08614cdbb02fa66b774af4e173a1fa048c364da90f3d841",
+      "release_sha256": "a19a5b11416f0259d08614cdbb02fa66b774af4e173a1fa048c364da90f3d841",
+      "changes": []
+    },
+    {
+      "path": "data/map1_10roads/task_routes.json",
+      "september_sha256": "ed1751934b077ae8b628342d4eb957419b85d1b13fef3d59007b336604751c1d",
+      "release_sha256": "ed1751934b077ae8b628342d4eb957419b85d1b13fef3d59007b336604751c1d",
+      "changes": []
+    },
+    {
+      "path": "data/map1_10roads/tasks.json",
+      "september_sha256": "523b273d423baac23bc02a2e65adb31c7fd5576a160fc98abc86d67459a52f92",
+      "release_sha256": "523b273d423baac23bc02a2e65adb31c7fd5576a160fc98abc86d67459a52f92",
+      "changes": []
+    },
+    {
+      "path": "data/map1_10roads/walker_waypoints.json",
+      "september_sha256": "c34586f205041cb65ef4a810f7303aa0b72ade004b660a66f1e94df2a767cf11",
+      "release_sha256": "c34586f205041cb65ef4a810f7303aa0b72ade004b660a66f1e94df2a767cf11",
+      "changes": []
+    },
+    {
+      "path": "data/map2_12roads/buildings.json",
+      "september_sha256": "cf29b7aae526ac35d41f1661cde6c6a7763872d0fd8fcba363a538b4d835bff3",
+      "release_sha256": "cf29b7aae526ac35d41f1661cde6c6a7763872d0fd8fcba363a538b4d835bff3",
+      "changes": []
+    },
+    {
+      "path": "data/map2_12roads/elements.json",
+      "september_sha256": "c2c1c50957e5057bf8fe1384e9e841bdd1288c590d3f3813cc65c856abcb4998",
+      "release_sha256": "c2c1c50957e5057bf8fe1384e9e841bdd1288c590d3f3813cc65c856abcb4998",
+      "changes": []
+    },
+    {
+      "path": "data/map2_12roads/obstacles.json",
+      "september_sha256": "35f522e2c2b4ff499c18f0019b046356de8fa9a38f3b07cc859d674d857c51fe",
+      "release_sha256": "35f522e2c2b4ff499c18f0019b046356de8fa9a38f3b07cc859d674d857c51fe",
+      "changes": []
+    },
+    {
+      "path": "data/map2_12roads/progen_world.json",
+      "september_sha256": "19c086a602f15f80ae0a82b8317333a329c8add62617cb55c9779305b60d20d6",
+      "release_sha256": "19c086a602f15f80ae0a82b8317333a329c8add62617cb55c9779305b60d20d6",
+      "changes": []
+    },
+    {
+      "path": "data/map2_12roads/roads.json",
+      "september_sha256": "4dad93515a3bb224e4d067f8f453132c919ae0f02c7d6c4ffb2898d814b79a53",
+      "release_sha256": "4dad93515a3bb224e4d067f8f453132c919ae0f02c7d6c4ffb2898d814b79a53",
+      "changes": []
+    },
+    {
+      "path": "data/map2_12roads/routes.json",
+      "september_sha256": "a19a5b11416f0259d08614cdbb02fa66b774af4e173a1fa048c364da90f3d841",
+      "release_sha256": "a19a5b11416f0259d08614cdbb02fa66b774af4e173a1fa048c364da90f3d841",
+      "changes": []
+    },
+    {
+      "path": "data/map2_12roads/task_routes.json",
+      "september_sha256": "a5b74d84bbda6b55380648c75a184ed6abc0ca9a6f35fa8c1fc5106f60884d0b",
+      "release_sha256": "a5b74d84bbda6b55380648c75a184ed6abc0ca9a6f35fa8c1fc5106f60884d0b",
+      "changes": []
+    },
+    {
+      "path": "data/map2_12roads/tasks.json",
+      "september_sha256": "6a0fe37f06eef5d475ef8e074ac31921743b85cf58b4dbbe6ac7ede8f1d12f2b",
+      "release_sha256": "6a0fe37f06eef5d475ef8e074ac31921743b85cf58b4dbbe6ac7ede8f1d12f2b",
+      "changes": []
+    },
+    {
+      "path": "data/map2_12roads/walker_waypoints.json",
+      "september_sha256": "ab380ebe64b7c3c3845630aa741d787ad1579319a74720314373653a3bcfa830",
+      "release_sha256": "ab380ebe64b7c3c3845630aa741d787ad1579319a74720314373653a3bcfa830",
+      "changes": []
+    },
+    {
+      "path": "data/map3_15roads/buildings.json",
+      "september_sha256": "1668f40499d074803e6ece59b0a8dbb2176a571f7acd62524e23d02507313298",
+      "release_sha256": "1668f40499d074803e6ece59b0a8dbb2176a571f7acd62524e23d02507313298",
+      "changes": []
+    },
+    {
+      "path": "data/map3_15roads/elements.json",
+      "september_sha256": "c2c1c50957e5057bf8fe1384e9e841bdd1288c590d3f3813cc65c856abcb4998",
+      "release_sha256": "c2c1c50957e5057bf8fe1384e9e841bdd1288c590d3f3813cc65c856abcb4998",
+      "changes": []
+    },
+    {
+      "path": "data/map3_15roads/obstacles.json",
+      "september_sha256": "8d5b5d5c59b9e65a9d58ca672c15b1ee2f6a4f1e7cac8fb07e8938e324d9f166",
+      "release_sha256": "8d5b5d5c59b9e65a9d58ca672c15b1ee2f6a4f1e7cac8fb07e8938e324d9f166",
+      "changes": []
+    },
+    {
+      "path": "data/map3_15roads/progen_world.json",
+      "september_sha256": "db392d22e422a7be12e417cdb742fecd45af5395c280425a9cc7b6a76e7ca5a6",
+      "release_sha256": "db392d22e422a7be12e417cdb742fecd45af5395c280425a9cc7b6a76e7ca5a6",
+      "changes": []
+    },
+    {
+      "path": "data/map3_15roads/roads.json",
+      "september_sha256": "750494a6a4ce34ac3acb781640ed5360225f3b9b76786232a15059a0c7b5912a",
+      "release_sha256": "750494a6a4ce34ac3acb781640ed5360225f3b9b76786232a15059a0c7b5912a",
+      "changes": []
+    },
+    {
+      "path": "data/map3_15roads/routes.json",
+      "september_sha256": "a19a5b11416f0259d08614cdbb02fa66b774af4e173a1fa048c364da90f3d841",
+      "release_sha256": "a19a5b11416f0259d08614cdbb02fa66b774af4e173a1fa048c364da90f3d841",
+      "changes": []
+    },
+    {
+      "path": "data/map3_15roads/task_routes.json",
+      "september_sha256": "b2dfc91c4e369d9090ffa3ab18972108def55ee9c05f15a5787789ec2f05ccd1",
+      "release_sha256": "b2dfc91c4e369d9090ffa3ab18972108def55ee9c05f15a5787789ec2f05ccd1",
+      "changes": []
+    },
+    {
+      "path": "data/map3_15roads/tasks.json",
+      "september_sha256": "937953cf272fcd6372ad2881cc0b158ac4f36fdc153c580070ddcc8ab1db9eeb",
+      "release_sha256": "937953cf272fcd6372ad2881cc0b158ac4f36fdc153c580070ddcc8ab1db9eeb",
+      "changes": []
+    },
+    {
+      "path": "data/map3_15roads/walker_waypoints.json",
+      "september_sha256": "f8cf3c7fcc6d084f3cbbc916c4eb3d31127f5f3ed325cf2ac2f670507093a192",
+      "release_sha256": "f8cf3c7fcc6d084f3cbbc916c4eb3d31127f5f3ed325cf2ac2f670507093a192",
+      "changes": []
+    },
+    {
+      "path": "data/map4_18roads/buildings.json",
+      "september_sha256": "850822db9ecea2afd996070e480ce178d95a05a3bd5539ce9fc3ea3f14e46db2",
+      "release_sha256": "850822db9ecea2afd996070e480ce178d95a05a3bd5539ce9fc3ea3f14e46db2",
+      "changes": []
+    },
+    {
+      "path": "data/map4_18roads/elements.json",
+      "september_sha256": "c2c1c50957e5057bf8fe1384e9e841bdd1288c590d3f3813cc65c856abcb4998",
+      "release_sha256": "c2c1c50957e5057bf8fe1384e9e841bdd1288c590d3f3813cc65c856abcb4998",
+      "changes": []
+    },
+    {
+      "path": "data/map4_18roads/obstacles.json",
+      "september_sha256": "e3584bb5352e30246232453da8d7db8d244ea4bb874756ce2eef39d2c0e8ff7f",
+      "release_sha256": "e3584bb5352e30246232453da8d7db8d244ea4bb874756ce2eef39d2c0e8ff7f",
+      "changes": []
+    },
+    {
+      "path": "data/map4_18roads/progen_world.json",
+      "september_sha256": "cb8dcae71dbe81d08f9705819476b9050cf5a5774b707c420ad3a9bf2211fa5e",
+      "release_sha256": "cb8dcae71dbe81d08f9705819476b9050cf5a5774b707c420ad3a9bf2211fa5e",
+      "changes": []
+    },
+    {
+      "path": "data/map4_18roads/roads.json",
+      "september_sha256": "ed6b10e7ceabbf23ece3d0f9f3b0615c506b8d5a462c73f6523e1061f48083d1",
+      "release_sha256": "ed6b10e7ceabbf23ece3d0f9f3b0615c506b8d5a462c73f6523e1061f48083d1",
+      "changes": []
+    },
+    {
+      "path": "data/map4_18roads/routes.json",
+      "september_sha256": "a19a5b11416f0259d08614cdbb02fa66b774af4e173a1fa048c364da90f3d841",
+      "release_sha256": "a19a5b11416f0259d08614cdbb02fa66b774af4e173a1fa048c364da90f3d841",
+      "changes": []
+    },
+    {
+      "path": "data/map4_18roads/task_routes.json",
+      "september_sha256": "0d5d334c2ae47625d4eae7e8f6a49c20dbff00c32e2126e68b12284ecd665ab2",
+      "release_sha256": "0d5d334c2ae47625d4eae7e8f6a49c20dbff00c32e2126e68b12284ecd665ab2",
+      "changes": []
+    },
+    {
+      "path": "data/map4_18roads/tasks.json",
+      "september_sha256": "0858d6aecd624dd6ec5d44e736f4465f79ce6557c77f6960665bf91b2156fe33",
+      "release_sha256": "0858d6aecd624dd6ec5d44e736f4465f79ce6557c77f6960665bf91b2156fe33",
+      "changes": []
+    },
+    {
+      "path": "data/map4_18roads/walker_waypoints.json",
+      "september_sha256": "ec3ae19a81163376818068e9540e9398a69618997f2d3cd8ab570b28fa441064",
+      "release_sha256": "ec3ae19a81163376818068e9540e9398a69618997f2d3cd8ab570b28fa441064",
+      "changes": []
+    },
+    {
+      "path": "data/map5_20roads/buildings.json",
+      "september_sha256": "84e15da4bd65616809ad4a4e11b36cf8dbac84fb51bf0a1eda63f4056024e1a5",
+      "release_sha256": "84e15da4bd65616809ad4a4e11b36cf8dbac84fb51bf0a1eda63f4056024e1a5",
+      "changes": []
+    },
+    {
+      "path": "data/map5_20roads/elements.json",
+      "september_sha256": "c2c1c50957e5057bf8fe1384e9e841bdd1288c590d3f3813cc65c856abcb4998",
+      "release_sha256": "c2c1c50957e5057bf8fe1384e9e841bdd1288c590d3f3813cc65c856abcb4998",
+      "changes": []
+    },
+    {
+      "path": "data/map5_20roads/obstacles.json",
+      "september_sha256": "ac14079992a2eda33917c84edf96b0c2a9025226c250b0804c419402354bfc06",
+      "release_sha256": "ac14079992a2eda33917c84edf96b0c2a9025226c250b0804c419402354bfc06",
+      "changes": []
+    },
+    {
+      "path": "data/map5_20roads/progen_world.json",
+      "september_sha256": "1ad79858844378363bc67abe3a63bfc7e07d1d330964c456981e89c20461b249",
+      "release_sha256": "1ad79858844378363bc67abe3a63bfc7e07d1d330964c456981e89c20461b249",
+      "changes": []
+    },
+    {
+      "path": "data/map5_20roads/roads.json",
+      "september_sha256": "347c7d6b6287c0ca6346bd4d58ad883a62975a78e85ad122fb69af3e2fb38ec7",
+      "release_sha256": "347c7d6b6287c0ca6346bd4d58ad883a62975a78e85ad122fb69af3e2fb38ec7",
+      "changes": []
+    },
+    {
+      "path": "data/map5_20roads/routes.json",
+      "september_sha256": "a19a5b11416f0259d08614cdbb02fa66b774af4e173a1fa048c364da90f3d841",
+      "release_sha256": "a19a5b11416f0259d08614cdbb02fa66b774af4e173a1fa048c364da90f3d841",
+      "changes": []
+    },
+    {
+      "path": "data/map5_20roads/task_routes.json",
+      "september_sha256": "5e98976bf7d6701034e082c200a12abd4d0e129dbf4054b7776f749f64c35844",
+      "release_sha256": "5e98976bf7d6701034e082c200a12abd4d0e129dbf4054b7776f749f64c35844",
+      "changes": []
+    },
+    {
+      "path": "data/map5_20roads/tasks.json",
+      "september_sha256": "ace3f26fe257cd24cd74dcbd2d2bcf47b6e5100246c30f24614d915349e1c00e",
+      "release_sha256": "ace3f26fe257cd24cd74dcbd2d2bcf47b6e5100246c30f24614d915349e1c00e",
+      "changes": []
+    },
+    {
+      "path": "data/map5_20roads/walker_waypoints.json",
+      "september_sha256": "ca33dd369546b28bf9ceee15926f863da3e11e3c6cf78fab7d442644ad263571",
+      "release_sha256": "ca33dd369546b28bf9ceee15926f863da3e11e3c6cf78fab7d442644ad263571",
+      "changes": []
+    },
+    {
+      "path": "data/tasks.json",
+      "september_sha256": "6e5f42832b44ce6babfc75681e2e77b93eae8cd16f9ed482eb0c1751bc70e6da",
+      "release_sha256": "6e5f42832b44ce6babfc75681e2e77b93eae8cd16f9ed482eb0c1751bc70e6da",
+      "changes": []
+    },
+    {
+      "path": "data/ue_assets.json",
+      "september_sha256": "b1b276bedb64abf4f34faa1e20403f904f5517c4eb72004328f4e0e24b0fe2f3",
+      "release_sha256": "b1b276bedb64abf4f34faa1e20403f904f5517c4eb72004328f4e0e24b0fe2f3",
+      "changes": []
+    },
+    {
+      "path": "evaluation/run_openai_benchmark.py",
+      "september_sha256": "99514b915692f75319ea0f4545fbae8a42f3e408de2ca35aeeb82a7884dec6dc",
+      "release_sha256": "b504b9a1858a054b55786a5bb2a68f56b8cef46659cc440697a4f2edfe02c9ac",
+      "changes": [
+        "Local deployment paths replaced with repository-relative or environment-configurable paths; benchmark logic unchanged."
+      ],
+      "change_category": "deployment_paths"
+    },
+    {
+      "path": "evaluation/run_openai_frontier_matrix.py",
+      "september_sha256": "1daf6dd9446a683cc240c4f2fbcbf8d730f9617a88ee580d8c8c180e84161c4f",
+      "release_sha256": "d523cf7a4cd92b08a5f5e8ae8c6606a44524987a78caa7c6f58a2ce1a6f650da",
+      "changes": [
+        "Local deployment paths replaced with repository-relative or environment-configurable paths; benchmark logic unchanged."
+      ],
+      "change_category": "deployment_paths"
+    },
+    {
+      "path": "evaluation/run_qwen3vl8b_all_maps.py",
+      "september_sha256": "a3fed49d2ad69542697de4c887b4f711519dfb8af0a3521de64667d4a348185d",
+      "release_sha256": "d8767f0fc01b114aacb72ce272750de08d874a8803d498acfb24956ef35e6333",
+      "changes": [
+        "Local deployment paths replaced with repository-relative or environment-configurable paths; benchmark logic unchanged."
+      ],
+      "change_category": "deployment_paths"
+    },
+    {
+      "path": "llm/codex_cli_backend.py",
+      "september_sha256": "a028fa2a83cbe41f4a01635b3b9c8ccf378ccbe3e38a4b04f28b3d336906ef63",
+      "release_sha256": "a028fa2a83cbe41f4a01635b3b9c8ccf378ccbe3e38a4b04f28b3d336906ef63",
+      "changes": []
+    },
+    {
+      "path": "llm/prompt.py",
+      "september_sha256": "5d9e319e94002fe8ca03317fa350bf745480597a9462798329b625690b5b9c1b",
+      "release_sha256": "0d68624cefa19f19651a606e08f9d4ebcb170a67f8fd2c22d13617e0a09703d0",
+      "changes": [
+        "Release real-time prompt omits \"shorter and\" to match the submitted Appendix A.2 display; the September source included those words."
+      ],
+      "change_category": "prompt_alignment"
+    },
+    {
+      "path": "llm/reasoning_capabilities.py",
+      "september_sha256": "d7748b5879fb57e1636ef8a940c1d2d08fce05552d3c20f04a0619411d26caf3",
+      "release_sha256": "d7748b5879fb57e1636ef8a940c1d2d08fce05552d3c20f04a0619411d26caf3",
+      "changes": []
+    },
+    {
+      "path": "llm/rt_llm.py",
+      "september_sha256": "ac2d72b4b2270920d0bf61b426dc11ae50c31479d494315c5eb38b83da200973",
+      "release_sha256": "ac2d72b4b2270920d0bf61b426dc11ae50c31479d494315c5eb38b83da200973",
+      "changes": []
+    },
+    {
+      "path": "manager/world_manager.py",
+      "september_sha256": "13436e4843b6d4a9b48d3bec9a94c6a94b5650dd2a367a0d37ffb1eb52f160a1",
+      "release_sha256": "b89202a77fc370cf37ba90799a580cb7f3b050d0d7bd760f918410a76ff3e52c",
+      "changes": [
+        "Uniform recovery, all-task batch iteration, and runtime protocol metadata."
+      ],
+      "change_category": "release_cleanup",
+      "runtime_update": true
+    },
+    {
+      "path": "requirements-openai-rollout.txt",
+      "september_sha256": "b735a0a625e2c21a1eef23553daf676aeea763119dacfdf08e4ce2cc01e0ba22",
+      "release_sha256": "69075054c6d3bf5e0104bbc5d72895f380f050216a76ee8978dc4fbfd62f95e8",
+      "changes": [
+        "Simplified release dependency instructions."
+      ],
+      "change_category": "release_cleanup"
+    },
+    {
+      "path": "sample/__init__.py",
+      "september_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "release_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "path": "sample/obstacle_sampler.py",
+      "september_sha256": "831ed57189643491ce0cceff315c710b1e83e5a47719239265d0f72daab6692b",
+      "release_sha256": "831ed57189643491ce0cceff315c710b1e83e5a47719239265d0f72daab6692b",
+      "changes": []
+    },
+    {
+      "path": "sample/pedestrian_sampler.py",
+      "september_sha256": "acb90a3d356aac949150ee3a1f10f8d3cebb468d258c8ebe54a46952b41de81d",
+      "release_sha256": "acb90a3d356aac949150ee3a1f10f8d3cebb468d258c8ebe54a46952b41de81d",
+      "changes": []
+    },
+    {
+      "path": "sample/rt_map.py",
+      "september_sha256": "fd31c21548d5826b670682dd68402aab8bcaa6421a4d725c9e569b866a68ea17",
+      "release_sha256": "fd31c21548d5826b670682dd68402aab8bcaa6421a4d725c9e569b866a68ea17",
+      "changes": []
+    },
+    {
+      "path": "sample/scooter_sampler.py",
+      "september_sha256": "d115247982a2beb491ebe50a4780073bfda9feaab3fecee67391589c8b8830a4",
+      "release_sha256": "d115247982a2beb491ebe50a4780073bfda9feaab3fecee67391589c8b8830a4",
+      "changes": []
+    },
+    {
+      "path": "sample/task_sampler.py",
+      "september_sha256": "c4ae74446f4e971ab2a60b7d5a1b437231ae3b79be8cdc38baa4ca04e50065d5",
+      "release_sha256": "c4ae74446f4e971ab2a60b7d5a1b437231ae3b79be8cdc38baa4ca04e50065d5",
+      "changes": []
+    },
+    {
+      "path": "sample/walker_waypoint_sampler.py",
+      "september_sha256": "ab3ec72397be072aa2e610afbf3feadb07fff22f79dc1ee791ac14a58716aeda",
+      "release_sha256": "ab3ec72397be072aa2e610afbf3feadb07fff22f79dc1ee791ac14a58716aeda",
+      "changes": []
+    },
+    {
+      "path": "utils/annotate_image.py",
+      "september_sha256": "174eda5b4a2580a59f439dc517a89fd7821dc95f387ab63c840a8f9d55a1347c",
+      "release_sha256": "174eda5b4a2580a59f439dc517a89fd7821dc95f387ab63c840a8f9d55a1347c",
+      "changes": []
+    },
+    {
+      "path": "utils/evaluation_metrics.py",
+      "september_sha256": "dac030a8e7b146ae1bf754951bd2b107f30ace7abd41d74fbdcd17192eeb0dad",
+      "release_sha256": "dac030a8e7b146ae1bf754951bd2b107f30ace7abd41d74fbdcd17192eeb0dad",
+      "changes": []
+    },
+    {
+      "path": "utils/img2base64.py",
+      "september_sha256": "777f7b2a6ceaa4a12d3c40f2c074eeaec477b7c0ccab60d5302d69d4ce354880",
+      "release_sha256": "777f7b2a6ceaa4a12d3c40f2c074eeaec477b7c0ccab60d5302d69d4ce354880",
+      "changes": []
+    },
+    {
+      "path": "utils/route_steps.py",
+      "september_sha256": "8fcef6ac6e27915532b928d5fe8e32476f838c5ce8771a0ec829e52ebd6284aa",
+      "release_sha256": "8fcef6ac6e27915532b928d5fe8e32476f838c5ce8771a0ec829e52ebd6284aa",
+      "changes": []
+    },
+    {
+      "path": "utils/task_routes.py",
+      "september_sha256": "0b9a6ae2eaa3bd28c52191093f393bca6ce3e9944e66f5b7d9da9a105c1d2014",
+      "release_sha256": "0b9a6ae2eaa3bd28c52191093f393bca6ce3e9944e66f5b7d9da9a105c1d2014",
+      "changes": []
+    }
+  ]
+}

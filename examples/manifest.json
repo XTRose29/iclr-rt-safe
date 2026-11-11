@@ -1,0 +1,14 @@
+[
+  {
+    "file": "native_task0/episode.json",
+    "runtime_protocol": "rt_safe_core_v1",
+    "kind": "scripted three-action UE excerpt",
+    "sha256": "5fe503df115214a3fb9aacbcc24b60f29c7754f86bfed7170e16fe5d3b3bc1e8"
+  },
+  {
+    "file": "native_waypoint5/episode.json",
+    "runtime_protocol": "rt_safe_core_v1",
+    "kind": "scripted native waypoint check",
+    "sha256": "98c32d021052097b534bba20befe7dec2badc80965090504ddcff8ec982a83bc"
+  }
+]

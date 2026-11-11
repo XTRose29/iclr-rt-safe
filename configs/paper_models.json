@@ -1,0 +1,130 @@
+{
+  "Astra": {
+    "model": "gpt-6-astra",
+    "provider": "codex-cli",
+    "api_mode": "codex_cli",
+    "max_llm_tokens": null,
+    "image_detail": "low",
+    "text_verbosity": "low",
+    "service_tier": "default",
+    "effort_ladder": {
+      "lower": "low",
+      "medium": "medium",
+      "higher": "max"
+    },
+    "recorded_default_request": "default",
+    "transport_in_core_release": true
+  },
+  "Sol": {
+    "model": "gpt-5.6-sol",
+    "provider": "codex-cli",
+    "api_mode": "codex_cli",
+    "max_llm_tokens": null,
+    "image_detail": "low",
+    "text_verbosity": "low",
+    "service_tier": "default",
+    "effort_ladder": {
+      "lower": "low",
+      "medium": "medium",
+      "higher": "max"
+    },
+    "recorded_default_request": "default",
+    "transport_in_core_release": true
+  },
+  "Fable": {
+    "model": "claude-fable-5-1",
+    "provider": "claude-code",
+    "api_mode": "claude_code",
+    "max_llm_tokens": null,
+    "image_detail": "low",
+    "text_verbosity": "low",
+    "service_tier": "default",
+    "effort_ladder": {
+      "lower": "low",
+      "medium": "high",
+      "higher": "max"
+    },
+    "recorded_default_request": "high",
+    "transport_in_core_release": false
+  },
+  "Sonnet": {
+    "model": "claude-sonnet-5",
+    "provider": "claude-code",
+    "api_mode": "claude_code",
+    "max_llm_tokens": null,
+    "image_detail": "low",
+    "text_verbosity": "low",
+    "service_tier": "default",
+    "effort_ladder": {
+      "lower": "low",
+      "medium": "high",
+      "higher": "max"
+    },
+    "recorded_default_request": "high",
+    "transport_in_core_release": false
+  },
+  "Gemini": {
+    "model": "google/gemini-3.8-flash",
+    "provider": "openrouter",
+    "api_mode": "chat_completions",
+    "max_llm_tokens": null,
+    "image_detail": "low",
+    "text_verbosity": "low",
+    "service_tier": "default",
+    "effort_ladder": {
+      "lower": "low",
+      "medium": "medium",
+      "higher": "high"
+    },
+    "recorded_default_request": "default",
+    "transport_in_core_release": true
+  },
+  "DeepSeek": {
+    "model": "deepseek/deepseek-v4-flash-vision-exp",
+    "provider": "openrouter",
+    "api_mode": "chat_completions",
+    "max_llm_tokens": null,
+    "image_detail": "low",
+    "text_verbosity": "low",
+    "service_tier": "default",
+    "effort_ladder": {
+      "lower": "low",
+      "medium": "high",
+      "higher": "max"
+    },
+    "recorded_default_request": "default",
+    "transport_in_core_release": true
+  },
+  "Inkling": {
+    "model": "thinkingmachines/inkling",
+    "provider": "openrouter",
+    "api_mode": "chat_completions",
+    "max_llm_tokens": null,
+    "image_detail": "low",
+    "text_verbosity": "low",
+    "service_tier": "default",
+    "effort_ladder": {
+      "lower": "low",
+      "medium": "high",
+      "higher": "max"
+    },
+    "recorded_default_request": "default",
+    "transport_in_core_release": true
+  },
+  "Grok": {
+    "model": "x-ai/grok-4.6",
+    "provider": "openrouter",
+    "api_mode": "chat_completions",
+    "max_llm_tokens": null,
+    "image_detail": "low",
+    "text_verbosity": "low",
+    "service_tier": "default",
+    "effort_ladder": {
+      "lower": "low",
+      "medium": "high",
+      "higher": "xhigh"
+    },
+    "recorded_default_request": "default",
+    "transport_in_core_release": true
+  }
+}

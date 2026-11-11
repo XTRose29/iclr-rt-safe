@@ -1,0 +1,76 @@
+{
+  "seed": 0,
+  "prompt_style": "instructional",
+  "traffic_policy": "visual_only",
+  "action_frame_mode": "video_history",
+  "max_steps": "3 * floor(route_length_m)",
+  "note": "Hard is stored as default in historical episode records. Mode-specific timing instructions are part of the original paper; neutral prompts are a separate later control.",
+  "observation": {
+    "width": 720,
+    "height": 640,
+    "fov_degrees": 100,
+    "pitch_degrees": -25
+  },
+  "conditions": {
+    "rq1": {
+      "difficulties": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "modes": [
+        "realtime"
+      ],
+      "effort": "recorded_default_request"
+    },
+    "rq2": {
+      "difficulties": [
+        "hard"
+      ],
+      "modes": [
+        "static",
+        "realtime"
+      ],
+      "effort": "recorded_default_request"
+    },
+    "rq3": {
+      "difficulties": [
+        "hard"
+      ],
+      "modes": [
+        "realtime"
+      ],
+      "efforts": [
+        "lower",
+        "medium",
+        "higher"
+      ]
+    },
+    "seed_stability": {
+      "models": [
+        "Sol",
+        "Gemini",
+        "Inkling",
+        "DeepSeek"
+      ],
+      "task_ids": [
+        0,
+        9,
+        13,
+        21,
+        23,
+        24,
+        31,
+        37
+      ],
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "difficulty": "hard",
+      "mode": "realtime",
+      "effort": "recorded_default_request"
+    }
+  }
+}

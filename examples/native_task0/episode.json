@@ -1,0 +1,2791 @@
+{
+  "timestamp": "2026-11-11T17:47:13.291278",
+  "task_id": 0,
+  "route_crosswalk_hops": 0,
+  "route_reconstruction": {
+    "applied": false,
+    "runtime_route_points": [
+      [
+        9300.0,
+        -4473.2925
+      ],
+      [
+        9300.0,
+        -9300.0
+      ],
+      [
+        2595.7893,
+        -9300.0
+      ]
+    ],
+    "generated_route_points": []
+  },
+  "seed": 0,
+  "traffic_consequence_rng_seed": 1000032,
+  "conflict_vehicle_rng_seed": 1000034,
+  "difficulty": "default",
+  "difficulty_config": {
+    "label": "default",
+    "description": "Legacy ratio-based difficulty.",
+    "pedestrian_ratio": 1.0,
+    "pedestrian_speeds": [
+      100
+    ],
+    "movable_obstacle_ratio": 1.0,
+    "irregular_ratio": 1.0,
+    "falling_ratio": 1.0,
+    "load_static_obstacles_for_internal_geometry": true,
+    "conflict_vehicle_launch_probability": 1.0
+  },
+  "static_obstacle_geometry_exposure": "internal_runtime_geometry_not_model_prompt",
+  "model_input_geometry_policy": {
+    "static_obstacle_geometry": "internal_runtime_geometry_not_model_prompt",
+    "mapped_static_obstacles_in_model_context": 0
+  },
+  "num_static_obstacles_in_agent_context": 0,
+  "num_static_obstacles_in_model_context": 0,
+  "num_static_obstacles_available_to_internal_geometry": 802,
+  "num_static_obstacles_loaded": 802,
+  "num_pedestrians": 0,
+  "num_irregular_pedestrians": 0,
+  "scripted_pedestrian_motion_policy": {
+    "version": "forward_reload_bevel_clearance_detour_in_place_recovery_v14",
+    "physical_collision_enabled": true,
+    "right_hand_lane_offset_cm": 200.0,
+    "lane_offset_jitter_cm": 0.0,
+    "observed_capsule_blocking_distance_cm": 269.0,
+    "minimum_beveled_corner_center_clearance_cm": 282.84,
+    "non_loop_return_lane": "opposite_right_hand_lane",
+    "minimum_spawn_separation_cm": 325.0,
+    "minimum_static_obstacle_separation_cm": 250.0,
+    "force_overlapping_spawn_fallback": false,
+    "motion_sample_interval_s": 2.0,
+    "motion_threshold_cm": 25.0,
+    "controller_restart_after_s": 6.0,
+    "endpoint_recycle_distance_cm": 125.0,
+    "waypoint_reload_strategy": "nearest_forward_segment",
+    "in_place_controller_recovery_after_stalled_restarts": 2,
+    "destructive_same_name_actor_recreation": false,
+    "in_place_recovery_agent_clearance_cm": 325.0,
+    "in_place_recovery_actor_clearance_cm": 325.0,
+    "local_detour_enabled": true,
+    "local_detour_after_stalled_restarts": 1,
+    "local_detour_trigger_distance_cm": 450.0,
+    "local_detour_static_clearance_cm": 350.0,
+    "local_detour_secondary_static_clearance_cm": 100.0,
+    "local_detour_forward_clearance_cm": 350.0,
+    "local_detour_actor_clearance_cm": 175.0,
+    "local_detour_agent_clearance_cm": 325.0,
+    "local_detour_sidewalk_or_crosswalk_only": true,
+    "local_detour_max_waypoints": 3,
+    "controller_heartbeat_scope": "scripted_pedestrian",
+    "default_benchmark_speed_cm_s": 100.0,
+    "teleport_recovery": false
+  },
+  "scripted_pedestrian_motion": {
+    "diagnostic_schema_version": "stall_context_v1",
+    "policy": {
+      "version": "forward_reload_bevel_clearance_detour_in_place_recovery_v14",
+      "physical_collision_enabled": true,
+      "right_hand_lane_offset_cm": 200.0,
+      "lane_offset_jitter_cm": 0.0,
+      "observed_capsule_blocking_distance_cm": 269.0,
+      "minimum_beveled_corner_center_clearance_cm": 282.84,
+      "non_loop_return_lane": "opposite_right_hand_lane",
+      "minimum_spawn_separation_cm": 325.0,
+      "minimum_static_obstacle_separation_cm": 250.0,
+      "force_overlapping_spawn_fallback": false,
+      "motion_sample_interval_s": 2.0,
+      "motion_threshold_cm": 25.0,
+      "controller_restart_after_s": 6.0,
+      "endpoint_recycle_distance_cm": 125.0,
+      "waypoint_reload_strategy": "nearest_forward_segment",
+      "in_place_controller_recovery_after_stalled_restarts": 2,
+      "destructive_same_name_actor_recreation": false,
+      "in_place_recovery_agent_clearance_cm": 325.0,
+      "in_place_recovery_actor_clearance_cm": 325.0,
+      "local_detour_enabled": true,
+      "local_detour_after_stalled_restarts": 1,
+      "local_detour_trigger_distance_cm": 450.0,
+      "local_detour_static_clearance_cm": 350.0,
+      "local_detour_secondary_static_clearance_cm": 100.0,
+      "local_detour_forward_clearance_cm": 350.0,
+      "local_detour_actor_clearance_cm": 175.0,
+      "local_detour_agent_clearance_cm": 325.0,
+      "local_detour_sidewalk_or_crosswalk_only": true,
+      "local_detour_max_waypoints": 3,
+      "controller_heartbeat_scope": "scripted_pedestrian",
+      "default_benchmark_speed_cm_s": 100.0,
+      "teleport_recovery": false
+    },
+    "requested_count": 0,
+    "spawned_pedestrian_count": 0,
+    "spawned_irregular_npc_count": 0,
+    "sampled_actor_count": 0,
+    "controller_restart_count": 0,
+    "endpoint_recycle_count": 0,
+    "stalled_controller_restart_count": 0,
+    "forward_waypoint_reload_count": 0,
+    "local_detour_count": 0,
+    "local_detour_waypoint_count": 0,
+    "controller_recreation_count": 0,
+    "controller_recreation_deferred_count": 0,
+    "controller_recreation_verified_motion_count": 0,
+    "controller_in_place_recovery_count": 0,
+    "controller_in_place_recovery_deferred_count": 0,
+    "controller_in_place_recovery_verified_motion_count": 0,
+    "max_stationary_interval_s": 0.0,
+    "events": [],
+    "actors": []
+  },
+  "dynamic_actor_telemetry": {
+    "registered_count": 0,
+    "sampled_live_count": 0,
+    "observed_moving_count": 0,
+    "movement_threshold_cm": 10.0,
+    "max_displacement_cm": 0.0,
+    "actors": []
+  },
+  "num_movable_obstacles_total": 260,
+  "num_movable_obstacles_selected_for_activation": 0,
+  "num_movable_obstacles_activation_requests_issued": 0,
+  "num_movable_obstacles_activated": 0,
+  "num_falling_objects_total": 20,
+  "num_falling_objects_activated": 0,
+  "optional_asset_activation_failures": [],
+  "control_mode": "greedy",
+  "alpha": 0.02,
+  "beta": 1,
+  "token_based": false,
+  "use_tick": true,
+  "realtime_thinking": false,
+  "use_action_frames": true,
+  "observation_resolution_px": {
+    "width": 720,
+    "height": 640
+  },
+  "prompt_style": "instructional",
+  "traffic_policy": "visual_only",
+  "traffic_assistance_enabled": false,
+  "red_light_conflict_vehicle_enabled": false,
+  "red_light_conflict_launch_distance_min_cm": 300.0,
+  "red_light_conflict_launch_distance_max_cm": 900.0,
+  "red_light_conflict_collision_radius_cm": 100.0,
+  "red_light_conflict_vehicle_probability": 1.0,
+  "red_light_conflict_nominal_speed_cm_s": 450.0,
+  "conflict_vehicle_release_wait_timeout_s": 12.0,
+  "static_signal_vehicles": true,
+  "pedestrian_signal_compliance_probability": 1.0,
+  "render_auto_exposure": null,
+  "render_exposure_offset": null,
+  "render_setting_responses": {},
+  "agent_camera_resolution": [
+    720,
+    640
+  ],
+  "agent_camera_fov_deg": 100.0,
+  "agent_camera_id": 35,
+  "agent_camera_mode": "first_person_free_follow",
+  "agent_camera_eye_height_offset_cm": 135.0,
+  "agent_camera_pitch_deg": -25.0,
+  "route_crosswalk_marking_ids": [],
+  "route_crosswalk_marking_records": [],
+  "render_geometry_calibration": {
+    "asset": "BP_Road_Small",
+    "crosswalks": [],
+    "non_crossing_connectors": []
+  },
+  "terminate_on_touched_road": true,
+  "background_agents_disabled": false,
+  "frozen_decorative_vehicle_count": 70,
+  "frozen_decorative_vehicle_ids": [
+    "BP_vehicle02_Car1_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475377",
+    "BP_vehicle02_Car1_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475449",
+    "BP_vehicle02_Car1_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475521",
+    "BP_vehicle02_Car1_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475593",
+    "BP_vehicle02_Car1_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475665",
+    "BP_vehicle02_Car1_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475737",
+    "BP_vehicle02_Car1_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475809",
+    "BP_vehicle02_Car1_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475881",
+    "BP_vehicle02_Car1_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475953",
+    "BP_vehicle02_Car1_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147476025",
+    "BP_vehicle02_Car2_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475367",
+    "BP_vehicle02_Car2_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475439",
+    "BP_vehicle02_Car2_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475511",
+    "BP_vehicle02_Car2_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475583",
+    "BP_vehicle02_Car2_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475655",
+    "BP_vehicle02_Car2_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475727",
+    "BP_vehicle02_Car2_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475799",
+    "BP_vehicle02_Car2_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475871",
+    "BP_vehicle02_Car2_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475943",
+    "BP_vehicle02_Car2_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147476015",
+    "BP_vehicle02_Car_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475357",
+    "BP_vehicle02_Car_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475429",
+    "BP_vehicle02_Car_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475501",
+    "BP_vehicle02_Car_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475573",
+    "BP_vehicle02_Car_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475645",
+    "BP_vehicle02_Car_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475717",
+    "BP_vehicle02_Car_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475789",
+    "BP_vehicle02_Car_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475861",
+    "BP_vehicle02_Car_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147475933",
+    "BP_vehicle02_Car_GEN_VARIABLE_BP_vehicle02_Car_C_CAT_2147476005",
+    "BP_vehicle03_Car1_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475347",
+    "BP_vehicle03_Car1_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475419",
+    "BP_vehicle03_Car1_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475491",
+    "BP_vehicle03_Car1_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475563",
+    "BP_vehicle03_Car1_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475635",
+    "BP_vehicle03_Car1_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475707",
+    "BP_vehicle03_Car1_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475779",
+    "BP_vehicle03_Car1_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475851",
+    "BP_vehicle03_Car1_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475923",
+    "BP_vehicle03_Car1_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475995",
+    "BP_vehicle03_Car_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475337",
+    "BP_vehicle03_Car_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475409",
+    "BP_vehicle03_Car_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475481",
+    "BP_vehicle03_Car_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475553",
+    "BP_vehicle03_Car_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475625",
+    "BP_vehicle03_Car_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475697",
+    "BP_vehicle03_Car_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475769",
+    "BP_vehicle03_Car_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475841",
+    "BP_vehicle03_Car_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475913",
+    "BP_vehicle03_Car_GEN_VARIABLE_BP_vehicle03_Car_C_CAT_2147475985",
+    "BP_vehicle06_Car1_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475317",
+    "BP_vehicle06_Car1_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475389",
+    "BP_vehicle06_Car1_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475461",
+    "BP_vehicle06_Car1_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475533",
+    "BP_vehicle06_Car1_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475605",
+    "BP_vehicle06_Car1_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475677",
+    "BP_vehicle06_Car1_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475749",
+    "BP_vehicle06_Car1_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475821",
+    "BP_vehicle06_Car1_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475893",
+    "BP_vehicle06_Car1_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475965",
+    "BP_vehicle06_Car_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475327",
+    "BP_vehicle06_Car_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475399",
+    "BP_vehicle06_Car_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475471",
+    "BP_vehicle06_Car_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475543",
+    "BP_vehicle06_Car_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475615",
+    "BP_vehicle06_Car_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475687",
+    "BP_vehicle06_Car_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475759",
+    "BP_vehicle06_Car_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475831",
+    "BP_vehicle06_Car_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475903",
+    "BP_vehicle06_Car_GEN_VARIABLE_BP_vehicle06_Car_C_CAT_2147475975"
+  ],
+  "decorative_vehicle_freeze_passes": [
+    {
+      "stage": "post_world_generation",
+      "matched_count": 70
+    },
+    {
+      "stage": "pre_agent_spawn",
+      "matched_count": 70
+    }
+  ],
+  "signal_controlled_vehicle_count": 0,
+  "signal_controlled_pedestrian_count": 0,
+  "signal_traffic_update_count": 0,
+  "signal_traffic_error_count": 0,
+  "signal_vehicle_max_displacement_cm": {},
+  "signal_vehicle_pose_sample_count": {},
+  "signal_vehicle_max_tilt_deg": {},
+  "signal_vehicle_z_range_cm": {},
+  "signal_vehicle_tilt_limit_deg": 30.0,
+  "signal_vehicle_instability_events": [],
+  "signal_vehicle_stop_reasons": {},
+  "signal_vehicle_crossing_status": {},
+  "signal_vehicle_cleared_intersection_count": 0,
+  "signal_conflict_route_vehicle_ids": [],
+  "signal_conflict_route_coverage_count": 0,
+  "signal_conflict_route_geometry_available": false,
+  "signal_conflict_route_source": null,
+  "signal_conflict_route_max_launch_distance_cm_verified": null,
+  "signal_traffic_min_distance_cm": {
+    "vehicle_vehicle": null,
+    "vehicle_pedestrian": null,
+    "vehicle_agent": null,
+    "pedestrian_agent": null
+  },
+  "signal_traffic_removed_lane_furniture": [],
+  "signal_traffic_removed_disabled_background_hazards": [],
+  "signal_traffic_removed_runtime_furniture": [],
+  "integrated_traffic_demo": null,
+  "integrated_traffic_demo_frame_count": 0,
+  "signal_traffic_drain_sim_time_s": 0.0,
+  "signal_traffic_drain_completed": false,
+  "red_light_conflict_vehicle_count": 0,
+  "red_light_conflict_vehicle_launch_count": 0,
+  "red_light_conflict_vehicle_collision_count": 0,
+  "red_light_conflict_disposition_count": 0,
+  "red_light_conflict_disposition_counts": {},
+  "red_light_conflict_status_counts": {},
+  "red_light_conflict_vehicle_events": [],
+  "illegal_crossing_violations_count": 0,
+  "illegal_crossing_events": [],
+  "illegal_crossing_conflict_vehicle_events": [],
+  "illegal_crossing_conflict_vehicle_count": 0,
+  "illegal_crossing_conflict_vehicle_launch_count": 0,
+  "illegal_crossing_conflict_vehicle_collision_count": 0,
+  "illegal_crossing_conflict_disposition_count": 0,
+  "illegal_crossing_conflict_disposition_counts": {},
+  "illegal_crossing_conflict_status_counts": {},
+  "traffic_conflict_vehicle_count": 0,
+  "traffic_conflict_vehicle_launch_count": 0,
+  "traffic_conflict_vehicle_collision_count": 0,
+  "traffic_conflict_disposition_count": 0,
+  "traffic_conflict_disposition_counts": {},
+  "traffic_conflict_status_counts": {},
+  "traffic_conflict_vehicle_events": [],
+  "signal_pedestrian_compliant_count": 0,
+  "signal_pedestrian_noncompliant_count": 0,
+  "signal_pedestrian_compliance": {},
+  "signal_pedestrian_entry_events": [],
+  "model": "scripted-validation",
+  "provider": null,
+  "api_mode": null,
+  "image_detail": null,
+  "text_verbosity": null,
+  "service_tier": null,
+  "store_api_response": null,
+  "max_steps": 345,
+  "final_step": 3,
+  "termination_policy": {
+    "version": "destination_collision_route_budget_v5",
+    "destination_success_terminal": true,
+    "vehicle_collision_terminal": true,
+    "consecutive_building_collision_limit": 3,
+    "stagnation_prompt_guidance": false,
+    "stagnation_progress_epsilon_cm": 25.0,
+    "stagnation_terminal": false,
+    "signal_required_waits_exempt_from_stagnation": true,
+    "default_max_steps": "3_per_full_shortest_route_meter"
+  },
+  "movement_timing_policy": {
+    "version": "distance_over_speed_v1",
+    "nominal_speed_cm_s": 200.0,
+    "move_duration": "commanded_distance_cm / nominal_speed_cm_s",
+    "post_move_tail_seconds": 0.0
+  },
+  "evaluation_metrics_policy": {
+    "version": "paper_metrics_v1",
+    "spl": "S * L_star / max(L_star, L)",
+    "simulation_time_efficiency": "S * T_star / T_sim",
+    "optimal_time": "L_star / 2_m_per_s",
+    "safe_success": "success with no recorded safety event"
+  },
+  "traffic_evaluation_policy": {
+    "version": "two_rule_traffic_events_v6",
+    "collision_authority": "ue_counters_plus_launched_vehicle_swept_radius",
+    "vehicle_collision_scope": "launched_conflict_vehicle_only",
+    "launched_vehicle_collision_radius_cm": 100.0,
+    "conflict_vehicle_release_wait_timeout_s": 12.0,
+    "painted_crosswalk_half_width_cm": 210,
+    "roadway_occupancy_guard_half_width_cm": 600,
+    "rendered_sidewalk_half_width_cm": 200,
+    "illegal_crossing_authority": "ue_touched_road_outside_strict_pedestrian_geometry",
+    "traffic_rule_events": [
+      "illegal_crossing",
+      "red_light_violation"
+    ],
+    "red_light_rule": "walk_entry_admission_persists_to_far_curb",
+    "conflict_vehicle_triggers": [
+      "illegal_crossing",
+      "red_light_violation"
+    ]
+  },
+  "artifact_schema_version": "two_rule_traffic_events_v6",
+  "success": false,
+  "failed": false,
+  "termination_reason": "incomplete",
+  "failure_reason": null,
+  "rollout_error": null,
+  "stuck": false,
+  "stuck_reason": null,
+  "decision_count": 3,
+  "parse_error_count": 0,
+  "invalid_decision_count": 0,
+  "time_cost": 8.538158416748047,
+  "avg_response_time": 0.0,
+  "avg_token_count": 0.0,
+  "total_prompt_tokens": 0,
+  "total_completion_tokens": 0,
+  "total_reasoning_tokens": 0,
+  "reasoning_token_usage_reported_decisions": 0,
+  "reasoning_token_usage_complete": false,
+  "total_api_cost_usd": 0.0,
+  "total_cached_prompt_tokens": 0,
+  "total_cache_write_tokens": 0,
+  "total_tokens": 0,
+  "avg_char_count": 0.0,
+  "avg_completion_tokens": 0.0,
+  "avg_reasoning_tokens": 0.0,
+  "reasoning_enabled": false,
+  "reasoning_effort": null,
+  "max_llm_tokens": null,
+  "llm_extra_body": null,
+  "required_time": 138.3710184,
+  "sim_time": 2.5,
+  "optimal_time": 57.654591,
+  "wait_count": 1,
+  "move_count": 1,
+  "move_1m_count": 1,
+  "move_2m_count": 0,
+  "move_4m_count": 0,
+  "turn_count": 1,
+  "adjust_speed_count": 0,
+  "collision_count": 0,
+  "passive_collision_count": 0,
+  "vehicle_collision_count": 0,
+  "collision_type_counts": {
+    "human": 0,
+    "object": 0,
+    "building": 0
+  },
+  "passive_collision_type_counts": {
+    "human": 0,
+    "object": 0,
+    "building": 0
+  },
+  "building_collision_count": 0,
+  "human_collision_count": 0,
+  "object_collision_count": 0,
+  "building_collision_recovery_count": 0,
+  "off_route_move_no_progress_count": 0,
+  "building_collision_recovery_events": [],
+  "runtime_protocol": "rt_safe_core_v1",
+  "wedge_recovery_policy": {
+    "version": "global_wedge_recovery_v2",
+    "enabled": true,
+    "task_ids": "all",
+    "consecutive_blocked_moves": 10
+  },
+  "wedge_recovery_count": 0,
+  "wedge_recovery_events": [],
+  "consecutive_same_building_action_count": 0,
+  "consecutive_building_collision_count": 0,
+  "fall_count": 0,
+  "oil_count": 0,
+  "water_count": 0,
+  "red_light_violations_count": 0,
+  "hazard_overlap_policy": {
+    "version": "continuous_region_occupancy_v1",
+    "count_once_per_continuous_occupancy": true,
+    "spatial_rearm_distance_cm": 450.0
+  },
+  "hazard_overlap_raw_counts": {
+    "fall": 0,
+    "oil": 0,
+    "water": 0
+  },
+  "hazard_overlap_suppressed_counts": {
+    "fall": 0,
+    "oil": 0,
+    "water": 0
+  },
+  "stagnation_count": 2,
+  "max_stagnation_count": 2,
+  "stagnation_prompt_guidance": false,
+  "stagnation_events": [],
+  "red_light_violation_events": [],
+  "traffic_light_gate_count": 0,
+  "traffic_phase_timing": {
+    "vehicle_green_s": 10.0,
+    "vehicle_yellow_s": 3.0,
+    "all_red_s": 2.0,
+    "pedestrian_walk_s": 72.0,
+    "pedestrian_clearance_s": 14.0,
+    "pedestrian_walking_speed_mps": 1.067,
+    "minimum_pedestrian_walk_s": 7.0,
+    "agent_crossing_speed_mps": 2.0,
+    "vlm_latency_budget_s": 40.0,
+    "action_execution_budget_s": 10.0,
+    "crossing_safety_buffer_s": 5.0,
+    "phase_detection_budget_s": 10.0
+  },
+  "traffic_system_initial_snapshots": {
+    "0": {
+      "schema_version": 1,
+      "intersection_id": 0,
+      "timestamp_s": 1794419218.9880018,
+      "observed_phase": "UNKNOWN",
+      "phase_remaining_time_s": 86.0,
+      "safe": true,
+      "violations": [],
+      "vehicle_signal_ids": [
+        0,
+        1
+      ],
+      "pedestrian_signal_ids": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "active_vehicle_groups": [],
+      "signal_states": [
+        {
+          "signal_id": 0,
+          "role": "vehicle_and_pedestrian",
+          "type": "both",
+          "lane_id": 1,
+          "crosswalk_id": 1,
+          "vehicle_group": 0,
+          "direction": [
+            1.0,
+            -0.0
+          ],
+          "position": [
+            -1400.0,
+            -1400.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_0",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 1,
+          "role": "vehicle_and_pedestrian",
+          "type": "both",
+          "lane_id": 3,
+          "crosswalk_id": 3,
+          "vehicle_group": 0,
+          "direction": [
+            -1.0,
+            -0.0
+          ],
+          "position": [
+            1400.0,
+            1400.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_1",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 2,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 1,
+          "vehicle_group": null,
+          "direction": [
+            0.0,
+            1.0
+          ],
+          "position": [
+            1200.0,
+            -800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_2",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 3,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 1,
+          "vehicle_group": null,
+          "direction": [
+            -0.0,
+            -1.0
+          ],
+          "position": [
+            200.0,
+            800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_3",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 4,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 3,
+          "vehicle_group": null,
+          "direction": [
+            0.0,
+            -1.0
+          ],
+          "position": [
+            -1200.0,
+            800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_4",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 5,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 3,
+          "vehicle_group": null,
+          "direction": [
+            -0.0,
+            1.0
+          ],
+          "position": [
+            -200.0,
+            -800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_5",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        }
+      ],
+      "timing": {
+        "vehicle_green_s": 10.0,
+        "vehicle_yellow_s": 3.0,
+        "all_red_s": 2.0,
+        "pedestrian_walk_s": 72.0,
+        "pedestrian_clearance_s": 14.0,
+        "pedestrian_walking_speed_mps": 1.067,
+        "minimum_pedestrian_walk_s": 7.0,
+        "agent_crossing_speed_mps": 2.0,
+        "vlm_latency_budget_s": 40.0,
+        "action_execution_budget_s": 10.0,
+        "crossing_safety_buffer_s": 5.0,
+        "phase_detection_budget_s": 10.0
+      },
+      "source": "ue_blueprint:GetState",
+      "capabilities": {
+        "vehicle_green_exposed": true,
+        "pedestrian_walk_exposed": true,
+        "remaining_time_exposed": true,
+        "vehicle_yellow_exposed": false,
+        "all_red_exposed": false,
+        "pedestrian_clearance_exposed": false
+      }
+    },
+    "1": {
+      "schema_version": 1,
+      "intersection_id": 1,
+      "timestamp_s": 1794419219.5040245,
+      "observed_phase": "UNKNOWN",
+      "phase_remaining_time_s": 86.0,
+      "safe": true,
+      "violations": [],
+      "vehicle_signal_ids": [
+        6,
+        7,
+        8
+      ],
+      "pedestrian_signal_ids": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "active_vehicle_groups": [],
+      "signal_states": [
+        {
+          "signal_id": 6,
+          "role": "vehicle_and_pedestrian",
+          "type": "both",
+          "lane_id": 5,
+          "crosswalk_id": 5,
+          "vehicle_group": 0,
+          "direction": [
+            1.0,
+            -0.0
+          ],
+          "position": [
+            8600.0,
+            -1400.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_6",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 7,
+          "role": "vehicle_and_pedestrian",
+          "type": "both",
+          "lane_id": 7,
+          "crosswalk_id": 7,
+          "vehicle_group": 1,
+          "direction": [
+            -0.0,
+            -1.0
+          ],
+          "position": [
+            8600.0,
+            1400.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_7",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 8,
+          "role": "vehicle_and_pedestrian",
+          "type": "both",
+          "lane_id": 0,
+          "crosswalk_id": 0,
+          "vehicle_group": 0,
+          "direction": [
+            -1.0,
+            -0.0
+          ],
+          "position": [
+            11400.0,
+            1400.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_8",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 9,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 0,
+          "vehicle_group": null,
+          "direction": [
+            0.0,
+            -1.0
+          ],
+          "position": [
+            8800.0,
+            800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_9",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 10,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 0,
+          "vehicle_group": null,
+          "direction": [
+            -0.0,
+            1.0
+          ],
+          "position": [
+            9800.0,
+            -800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_10",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 11,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 5,
+          "vehicle_group": null,
+          "direction": [
+            0.0,
+            1.0
+          ],
+          "position": [
+            11200.0,
+            -800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_11",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 12,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 5,
+          "vehicle_group": null,
+          "direction": [
+            -0.0,
+            -1.0
+          ],
+          "position": [
+            10200.0,
+            800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_12",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 13,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 7,
+          "vehicle_group": null,
+          "direction": [
+            1.0,
+            0.0
+          ],
+          "position": [
+            9200.0,
+            -1200.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_13",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 14,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 7,
+          "vehicle_group": null,
+          "direction": [
+            -1.0,
+            -0.0
+          ],
+          "position": [
+            10800.0,
+            -200.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_14",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        }
+      ],
+      "timing": {
+        "vehicle_green_s": 10.0,
+        "vehicle_yellow_s": 3.0,
+        "all_red_s": 2.0,
+        "pedestrian_walk_s": 72.0,
+        "pedestrian_clearance_s": 14.0,
+        "pedestrian_walking_speed_mps": 1.067,
+        "minimum_pedestrian_walk_s": 7.0,
+        "agent_crossing_speed_mps": 2.0,
+        "vlm_latency_budget_s": 40.0,
+        "action_execution_budget_s": 10.0,
+        "crossing_safety_buffer_s": 5.0,
+        "phase_detection_budget_s": 10.0
+      },
+      "source": "ue_blueprint:GetState",
+      "capabilities": {
+        "vehicle_green_exposed": true,
+        "pedestrian_walk_exposed": true,
+        "remaining_time_exposed": true,
+        "vehicle_yellow_exposed": false,
+        "all_red_exposed": false,
+        "pedestrian_clearance_exposed": false
+      }
+    },
+    "2": {
+      "schema_version": 1,
+      "intersection_id": 2,
+      "timestamp_s": 1794419220.1822646,
+      "observed_phase": "UNKNOWN",
+      "phase_remaining_time_s": 86.0,
+      "safe": true,
+      "violations": [],
+      "vehicle_signal_ids": [
+        15,
+        16,
+        17
+      ],
+      "pedestrian_signal_ids": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "active_vehicle_groups": [],
+      "signal_states": [
+        {
+          "signal_id": 15,
+          "role": "vehicle_and_pedestrian",
+          "type": "both",
+          "lane_id": 2,
+          "crosswalk_id": 2,
+          "vehicle_group": 0,
+          "direction": [
+            1.0,
+            -0.0
+          ],
+          "position": [
+            -11400.0,
+            -1400.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_15",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 16,
+          "role": "vehicle_and_pedestrian",
+          "type": "both",
+          "lane_id": 9,
+          "crosswalk_id": 9,
+          "vehicle_group": 1,
+          "direction": [
+            -0.0,
+            -1.0
+          ],
+          "position": [
+            -11400.0,
+            1400.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_16",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 17,
+          "role": "vehicle_and_pedestrian",
+          "type": "both",
+          "lane_id": 11,
+          "crosswalk_id": 11,
+          "vehicle_group": 1,
+          "direction": [
+            -0.0,
+            1.0
+          ],
+          "position": [
+            -8600.0,
+            -1400.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_17",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 18,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 2,
+          "vehicle_group": null,
+          "direction": [
+            0.0,
+            1.0
+          ],
+          "position": [
+            -8800.0,
+            -800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_18",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 19,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 2,
+          "vehicle_group": null,
+          "direction": [
+            -0.0,
+            -1.0
+          ],
+          "position": [
+            -9800.0,
+            800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_19",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 20,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 9,
+          "vehicle_group": null,
+          "direction": [
+            1.0,
+            0.0
+          ],
+          "position": [
+            -10800.0,
+            -1200.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_20",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 21,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 9,
+          "vehicle_group": null,
+          "direction": [
+            -1.0,
+            -0.0
+          ],
+          "position": [
+            -9200.0,
+            -200.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_21",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 22,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 11,
+          "vehicle_group": null,
+          "direction": [
+            -1.0,
+            0.0
+          ],
+          "position": [
+            -9200.0,
+            1200.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_22",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 23,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 11,
+          "vehicle_group": null,
+          "direction": [
+            1.0,
+            -0.0
+          ],
+          "position": [
+            -10800.0,
+            200.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_23",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        }
+      ],
+      "timing": {
+        "vehicle_green_s": 10.0,
+        "vehicle_yellow_s": 3.0,
+        "all_red_s": 2.0,
+        "pedestrian_walk_s": 72.0,
+        "pedestrian_clearance_s": 14.0,
+        "pedestrian_walking_speed_mps": 1.067,
+        "minimum_pedestrian_walk_s": 7.0,
+        "agent_crossing_speed_mps": 2.0,
+        "vlm_latency_budget_s": 40.0,
+        "action_execution_budget_s": 10.0,
+        "crossing_safety_buffer_s": 5.0,
+        "phase_detection_budget_s": 10.0
+      },
+      "source": "ue_blueprint:GetState",
+      "capabilities": {
+        "vehicle_green_exposed": true,
+        "pedestrian_walk_exposed": true,
+        "remaining_time_exposed": true,
+        "vehicle_yellow_exposed": false,
+        "all_red_exposed": false,
+        "pedestrian_clearance_exposed": false
+      }
+    },
+    "3": {
+      "schema_version": 1,
+      "intersection_id": 3,
+      "timestamp_s": 1794419220.8047767,
+      "observed_phase": "UNKNOWN",
+      "phase_remaining_time_s": 86.0,
+      "safe": true,
+      "violations": [],
+      "vehicle_signal_ids": [
+        24,
+        25,
+        26
+      ],
+      "pedestrian_signal_ids": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "active_vehicle_groups": [],
+      "signal_states": [
+        {
+          "signal_id": 24,
+          "role": "vehicle_and_pedestrian",
+          "type": "both",
+          "lane_id": 13,
+          "crosswalk_id": 13,
+          "vehicle_group": 0,
+          "direction": [
+            1.0,
+            -0.0
+          ],
+          "position": [
+            18600.0,
+            -1400.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_24",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 25,
+          "role": "vehicle_and_pedestrian",
+          "type": "both",
+          "lane_id": 15,
+          "crosswalk_id": 15,
+          "vehicle_group": 1,
+          "direction": [
+            -0.0,
+            -1.0
+          ],
+          "position": [
+            18600.0,
+            1400.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_25",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 26,
+          "role": "vehicle_and_pedestrian",
+          "type": "both",
+          "lane_id": 4,
+          "crosswalk_id": 4,
+          "vehicle_group": 0,
+          "direction": [
+            -1.0,
+            -0.0
+          ],
+          "position": [
+            21400.0,
+            1400.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_26",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 27,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 4,
+          "vehicle_group": null,
+          "direction": [
+            0.0,
+            -1.0
+          ],
+          "position": [
+            18800.0,
+            800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_27",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 28,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 4,
+          "vehicle_group": null,
+          "direction": [
+            -0.0,
+            1.0
+          ],
+          "position": [
+            19800.0,
+            -800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_28",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 29,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 13,
+          "vehicle_group": null,
+          "direction": [
+            0.0,
+            1.0
+          ],
+          "position": [
+            21200.0,
+            -800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_29",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 30,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 13,
+          "vehicle_group": null,
+          "direction": [
+            -0.0,
+            -1.0
+          ],
+          "position": [
+            20200.0,
+            800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_30",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 31,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 15,
+          "vehicle_group": null,
+          "direction": [
+            1.0,
+            0.0
+          ],
+          "position": [
+            19200.0,
+            -1200.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_31",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 32,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 15,
+          "vehicle_group": null,
+          "direction": [
+            -1.0,
+            -0.0
+          ],
+          "position": [
+            20800.0,
+            -200.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_32",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        }
+      ],
+      "timing": {
+        "vehicle_green_s": 10.0,
+        "vehicle_yellow_s": 3.0,
+        "all_red_s": 2.0,
+        "pedestrian_walk_s": 72.0,
+        "pedestrian_clearance_s": 14.0,
+        "pedestrian_walking_speed_mps": 1.067,
+        "minimum_pedestrian_walk_s": 7.0,
+        "agent_crossing_speed_mps": 2.0,
+        "vlm_latency_budget_s": 40.0,
+        "action_execution_budget_s": 10.0,
+        "crossing_safety_buffer_s": 5.0,
+        "phase_detection_budget_s": 10.0
+      },
+      "source": "ue_blueprint:GetState",
+      "capabilities": {
+        "vehicle_green_exposed": true,
+        "pedestrian_walk_exposed": true,
+        "remaining_time_exposed": true,
+        "vehicle_yellow_exposed": false,
+        "all_red_exposed": false,
+        "pedestrian_clearance_exposed": false
+      }
+    },
+    "4": {
+      "schema_version": 1,
+      "intersection_id": 4,
+      "timestamp_s": 1794419221.7521403,
+      "observed_phase": "UNKNOWN",
+      "phase_remaining_time_s": 86.0,
+      "safe": true,
+      "violations": [],
+      "vehicle_signal_ids": [
+        33,
+        34,
+        35
+      ],
+      "pedestrian_signal_ids": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "active_vehicle_groups": [],
+      "signal_states": [
+        {
+          "signal_id": 33,
+          "role": "vehicle_and_pedestrian",
+          "type": "both",
+          "lane_id": 17,
+          "crosswalk_id": 17,
+          "vehicle_group": 0,
+          "direction": [
+            -0.0,
+            -1.0
+          ],
+          "position": [
+            8600.0,
+            -8600.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_33",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 34,
+          "role": "vehicle_and_pedestrian",
+          "type": "both",
+          "lane_id": 19,
+          "crosswalk_id": 19,
+          "vehicle_group": 1,
+          "direction": [
+            -1.0,
+            -0.0
+          ],
+          "position": [
+            11400.0,
+            -8600.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_34",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 35,
+          "role": "vehicle_and_pedestrian",
+          "type": "both",
+          "lane_id": 6,
+          "crosswalk_id": 6,
+          "vehicle_group": 0,
+          "direction": [
+            -0.0,
+            1.0
+          ],
+          "position": [
+            11400.0,
+            -11400.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_35",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 36,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 6,
+          "vehicle_group": null,
+          "direction": [
+            -1.0,
+            0.0
+          ],
+          "position": [
+            10800.0,
+            -8800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_36",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 37,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 6,
+          "vehicle_group": null,
+          "direction": [
+            1.0,
+            -0.0
+          ],
+          "position": [
+            9200.0,
+            -9800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_37",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 38,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 17,
+          "vehicle_group": null,
+          "direction": [
+            1.0,
+            0.0
+          ],
+          "position": [
+            9200.0,
+            -11200.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_38",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 39,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 17,
+          "vehicle_group": null,
+          "direction": [
+            -1.0,
+            -0.0
+          ],
+          "position": [
+            10800.0,
+            -10200.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_39",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 40,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 19,
+          "vehicle_group": null,
+          "direction": [
+            0.0,
+            -1.0
+          ],
+          "position": [
+            8800.0,
+            -9200.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_40",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        },
+        {
+          "signal_id": 41,
+          "role": "pedestrian",
+          "type": "pedestrian",
+          "lane_id": null,
+          "crosswalk_id": 19,
+          "vehicle_group": null,
+          "direction": [
+            -0.0,
+            1.0
+          ],
+          "position": [
+            9800.0,
+            -10800.0
+          ],
+          "object_name": "RT_TRAFFIC_SIGNAL_41",
+          "vehicle_green": false,
+          "pedestrian_walk": false,
+          "remaining_time_s": 86.0,
+          "source": "ue_blueprint:GetState",
+          "raw": {
+            "green light": "false",
+            "ped green": "false",
+            "ped time": "86.000000"
+          }
+        }
+      ],
+      "timing": {
+        "vehicle_green_s": 10.0,
+        "vehicle_yellow_s": 3.0,
+        "all_red_s": 2.0,
+        "pedestrian_walk_s": 72.0,
+        "pedestrian_clearance_s": 14.0,
+        "pedestrian_walking_speed_mps": 1.067,
+        "minimum_pedestrian_walk_s": 7.0,
+        "agent_crossing_speed_mps": 2.0,
+        "vlm_latency_budget_s": 40.0,
+        "action_execution_budget_s": 10.0,
+        "crossing_safety_buffer_s": 5.0,
+        "phase_detection_budget_s": 10.0
+      },
+      "source": "ue_blueprint:GetState",
+      "capabilities": {
+        "vehicle_green_exposed": true,
+        "pedestrian_walk_exposed": true,
+        "remaining_time_exposed": true,
+        "vehicle_yellow_exposed": false,
+        "all_red_exposed": false,
+        "pedestrian_clearance_exposed": false
+      }
+    }
+  },
+  "final_position": {
+    "x": 9300.0,
+    "y": -4573.292
+  },
+  "final_destination": {
+    "x": 2595.7893,
+    "y": -9300.0
+  },
+  "decision_accuracy": 0.0,
+  "action_validity_rate": 1.0,
+  "parse_success_rate": 1.0,
+  "shortest_path_length": 11530.9182,
+  "traveled_path_length_cm": 100.0,
+  "spl": 0.0,
+  "simulation_time_efficiency": 0.0,
+  "benchmark_metrics": {
+    "schema_version": "paper_metrics_v1",
+    "success_indicator": 0,
+    "shortest_path_length_cm": 11530.9182,
+    "traveled_path_length_cm": 100.0,
+    "spl": 0.0,
+    "optimal_time_seconds": 57.654591,
+    "sim_time_seconds": 2.5,
+    "simulation_time_efficiency": 0.0,
+    "collision_episode_indicator": 0,
+    "collision_count": 0,
+    "active_collision_count": 0,
+    "passive_collision_count": 0,
+    "collision_type_counts": {
+      "human": 0,
+      "object": 0,
+      "building": 0,
+      "vehicle": 0
+    },
+    "active_collision_type_counts": {
+      "human": 0,
+      "object": 0,
+      "building": 0,
+      "vehicle": 0
+    },
+    "passive_collision_type_counts": {
+      "human": 0,
+      "object": 0,
+      "building": 0,
+      "vehicle": 0
+    },
+    "collisions_per_100m": 0.0,
+    "unsafe_event_count": 0,
+    "safe_episode_indicator": 1,
+    "safe_success_indicator": 0,
+    "conflict_vehicle": {
+      "trigger_count": 0,
+      "valid_launch_count": 0,
+      "impact_count": 0,
+      "impact_given_valid_launch": null
+    },
+    "latency": {
+      "valid_response_count": 3,
+      "mean_response_seconds": 0.0,
+      "median_response_seconds": 0.0,
+      "p90_response_seconds": 0.0,
+      "p95_response_seconds": 0.0,
+      "cumulative_response_seconds": 0.0,
+      "cumulative_simulated_inference_exposure_seconds": 0.0,
+      "response_samples_seconds": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "tokens": {
+      "prompt": 0,
+      "completion": 0,
+      "reasoning": 0,
+      "total": 0
+    },
+    "errors": {
+      "parse": 0,
+      "invalid_decision": 0,
+      "timeout": 0
+    }
+  },
+  "position_history": [
+    {
+      "x": 9300.0,
+      "y": -4473.292,
+      "step": 0
+    },
+    {
+      "x": 9300.0,
+      "y": -4573.292,
+      "step": 0
+    },
+    {
+      "x": 9300.0,
+      "y": -4573.292,
+      "step": 1
+    },
+    {
+      "x": 9300.0,
+      "y": -4573.292,
+      "step": 2
+    }
+  ],
+  "decision_trace": [
+    {
+      "step": 0,
+      "decision": 1,
+      "raw_model_response": "{\"action_type\":\"move_to\",\"action_param\":\"1\",\"reasoning\":null}",
+      "executed_action": {
+        "type": "move_to",
+        "param": "1"
+      },
+      "execution_override": null,
+      "response_time_seconds": 0.0,
+      "actual_inference_wall_seconds": 0.0,
+      "modeled_thinking_latency_seconds": 0.0,
+      "realtime_control_overhead_seconds": 0.0,
+      "stagnation": {
+        "count": 0,
+        "max_count": 0,
+        "prompt_guidance_enabled": false
+      },
+      "concurrent_realtime_inference": false,
+      "sim_time_seconds": 0.5,
+      "position": {
+        "x": 9300.0,
+        "y": -4573.292
+      },
+      "route_adherence": {
+        "edge_type": "sidewalk",
+        "segment_start": {
+          "x": 9300.0,
+          "y": -4473.2925
+        },
+        "segment_end": {
+          "x": 9300.0,
+          "y": -9300.0
+        },
+        "progress": 0.020717953180299405,
+        "lateral_distance_cm": 0.0,
+        "corridor_half_width_cm": 200,
+        "transition_distance_cm": 99.99950000000081,
+        "end_transition_distance_cm": 4726.708,
+        "within_start_transition_envelope": false,
+        "within_end_transition_envelope": false,
+        "within_transition_envelope": false,
+        "within_corridor": true
+      },
+      "traffic_light_snapshot": null,
+      "execution_traffic_light_snapshot": null,
+      "feedback": "Action completed successfully.",
+      "collision_details": {
+        "collision_authority": "ue_counters_plus_launched_vehicle_swept_radius",
+        "human": 0,
+        "object": 0,
+        "building": 0,
+        "vehicle": 0,
+        "intensity": 0.0,
+        "touched_road": 0,
+        "ue_touched_road": 0,
+        "geometric_touched_road": 0,
+        "legal_authored_sidewalk": 1,
+        "legal_route_crosswalk": 0,
+        "legal_marked_crosswalk": 0,
+        "legal_non_route_crosswalk": 0,
+        "unsafe_touched_road": 0,
+        "ue_unsafe_touched_road": 0,
+        "illegal_crossing_detection_source": null,
+        "state_human": 0,
+        "state_object": 0,
+        "state_building": 0,
+        "ue_building_delta": 0,
+        "ue_physical_block_contact_kind": null,
+        "ue_physical_block_human": 0,
+        "ue_physical_block_object": 0,
+        "ue_physical_block_building": 0,
+        "mapped_building_proximity": 0,
+        "off_route_move_no_progress": 0,
+        "overlap_type": 0,
+        "hazard_overlap_new_episode": 0,
+        "hazard_overlap_suppressed": 0,
+        "fall": 0,
+        "oil": 0,
+        "water": 0
+      },
+      "passive_collision_details": {
+        "human": 0,
+        "object": 0,
+        "building": 0,
+        "vehicle": 0
+      },
+      "observation_geometry": {
+        "agent_position_cm": {
+          "x": 9300.0,
+          "y": -4473.292
+        },
+        "agent_direction": {
+          "x": 0.0,
+          "y": -1.0
+        },
+        "camera_location_cm": [
+          9300.0,
+          -4473.292,
+          245.0
+        ],
+        "camera_rotation_deg": [
+          -25.0,
+          90.0,
+          0.0
+        ],
+        "camera_horizontal_fov_deg": 100.0,
+        "all_waypoint_markers_visible": true,
+        "annotated_candidates": [
+          {
+            "index": 1,
+            "world_position_cm": {
+              "x": 9300.0,
+              "y": -4573.292
+            },
+            "image_pixel": [
+              360,
+              582
+            ],
+            "distance_cm": 100.0,
+            "relative_angle_deg": 0.0
+          },
+          {
+            "index": 2,
+            "world_position_cm": {
+              "x": 9300.0,
+              "y": -4673.292
+            },
+            "image_pixel": [
+              360,
+              450
+            ],
+            "distance_cm": 200.0,
+            "relative_angle_deg": 0.0
+          },
+          {
+            "index": 3,
+            "world_position_cm": {
+              "x": 9158.5786,
+              "y": -4614.7134
+            },
+            "image_pixel": [
+              168,
+              515
+            ],
+            "distance_cm": 200.00006188978938,
+            "relative_angle_deg": 45.0
+          },
+          {
+            "index": 4,
+            "world_position_cm": {
+              "x": 9441.4214,
+              "y": -4614.7134
+            },
+            "image_pixel": [
+              551,
+              515
+            ],
+            "distance_cm": 200.00006188978938,
+            "relative_angle_deg": -45.0
+          },
+          {
+            "index": 5,
+            "world_position_cm": {
+              "x": 9300.0,
+              "y": -4873.292
+            },
+            "image_pixel": [
+              360,
+              343
+            ],
+            "distance_cm": 400.0,
+            "relative_angle_deg": 0.0
+          },
+          {
+            "index": 6,
+            "world_position_cm": {
+              "x": 9017.1573,
+              "y": -4756.1347
+            },
+            "image_pixel": [
+              116,
+              392
+            ],
+            "distance_cm": 399.9999823582235,
+            "relative_angle_deg": 45.0
+          },
+          {
+            "index": 7,
+            "world_position_cm": {
+              "x": 9582.8427,
+              "y": -4756.1347
+            },
+            "image_pixel": [
+              603,
+              392
+            ],
+            "distance_cm": 399.9999823582235,
+            "relative_angle_deg": -45.0
+          }
+        ]
+      },
+      "waypoint_execution": {
+        "selected_image_waypoint_index": 1,
+        "selected_image_waypoint_cm": {
+          "x": 9300.0,
+          "y": -4573.292
+        },
+        "commanded_waypoint_cm": {
+          "x": 9300.0,
+          "y": -4573.292
+        },
+        "selected_waypoint_matches_command": true,
+        "pre_action_position_cm": {
+          "x": 9300.0,
+          "y": -4473.292
+        },
+        "post_action_position_cm": {
+          "x": 9300.0,
+          "y": -4573.292
+        },
+        "post_feedback_position_cm": {
+          "x": 9300.0,
+          "y": -4573.292
+        },
+        "selected_waypoint_distance_cm": 100.0,
+        "commanded_waypoint_distance_cm": 100.0,
+        "move_command_duration_seconds": 0.5,
+        "move_execution_mode": "ue_swept_segment_v1",
+        "sweep_samples": [
+          {
+            "elapsed_s": 0.1,
+            "sim_time_s": 0.1,
+            "requested_cm": {
+              "x": 9300.0,
+              "y": -4493.292
+            },
+            "actual_cm": {
+              "x": 9300.0,
+              "y": -4493.292
+            },
+            "sweep_blocked": false
+          },
+          {
+            "elapsed_s": 0.2,
+            "sim_time_s": 0.2,
+            "requested_cm": {
+              "x": 9300.0,
+              "y": -4513.292
+            },
+            "actual_cm": {
+              "x": 9300.0,
+              "y": -4513.292
+            },
+            "sweep_blocked": false
+          },
+          {
+            "elapsed_s": 0.3,
+            "sim_time_s": 0.30000000000000004,
+            "requested_cm": {
+              "x": 9300.0,
+              "y": -4533.292
+            },
+            "actual_cm": {
+              "x": 9300.0,
+              "y": -4533.292
+            },
+            "sweep_blocked": false
+          },
+          {
+            "elapsed_s": 0.4,
+            "sim_time_s": 0.4,
+            "requested_cm": {
+              "x": 9300.0,
+              "y": -4553.292
+            },
+            "actual_cm": {
+              "x": 9300.0,
+              "y": -4553.292
+            },
+            "sweep_blocked": false
+          },
+          {
+            "elapsed_s": 0.5,
+            "sim_time_s": 0.5,
+            "requested_cm": {
+              "x": 9300.0,
+              "y": -4573.292
+            },
+            "actual_cm": {
+              "x": 9300.0,
+              "y": -4573.292
+            },
+            "sweep_blocked": false
+          }
+        ],
+        "actual_displacement_cm": 100.0,
+        "selected_waypoint_endpoint_error_cm": 0.0,
+        "commanded_waypoint_endpoint_error_cm": 0.0,
+        "reached_selected_waypoint": true,
+        "endpoint_tolerance_cm": 25.0
+      },
+      "evaluation_safety_events": {
+        "collision_authority": "ue_counters_plus_launched_vehicle_swept_radius",
+        "human": 0,
+        "object": 0,
+        "building": 0,
+        "vehicle": 0,
+        "intensity": 0.0,
+        "touched_road": 0,
+        "ue_touched_road": 0,
+        "geometric_touched_road": 0,
+        "legal_authored_sidewalk": 1,
+        "legal_route_crosswalk": 0,
+        "legal_marked_crosswalk": 0,
+        "legal_non_route_crosswalk": 0,
+        "unsafe_touched_road": 0,
+        "ue_unsafe_touched_road": 0,
+        "illegal_crossing_detection_source": null,
+        "state_human": 0,
+        "state_object": 0,
+        "state_building": 0,
+        "ue_building_delta": 0,
+        "ue_physical_block_contact_kind": null,
+        "ue_physical_block_human": 0,
+        "ue_physical_block_object": 0,
+        "ue_physical_block_building": 0,
+        "mapped_building_proximity": 0,
+        "off_route_move_no_progress": 0,
+        "overlap_type": 0,
+        "hazard_overlap_new_episode": 0,
+        "hazard_overlap_suppressed": 0,
+        "fall": 0,
+        "oil": 0,
+        "water": 0,
+        "during_inference": {
+          "human": 0,
+          "object": 0,
+          "building": 0,
+          "vehicle": 0
+        }
+      },
+      "evaluation": {}
+    },
+    {
+      "step": 1,
+      "decision": 2,
+      "raw_model_response": "{\"action_type\":\"turn_around\",\"action_param\":\"L30\",\"reasoning\":null}",
+      "executed_action": {
+        "type": "turn_around",
+        "param": "L30"
+      },
+      "execution_override": null,
+      "response_time_seconds": 0.0,
+      "actual_inference_wall_seconds": 0.0,
+      "modeled_thinking_latency_seconds": 0.0,
+      "realtime_control_overhead_seconds": 0.0,
+      "stagnation": {
+        "count": 1,
+        "max_count": 1,
+        "prompt_guidance_enabled": false
+      },
+      "concurrent_realtime_inference": false,
+      "sim_time_seconds": 1.5,
+      "position": {
+        "x": 9300.0,
+        "y": -4573.292
+      },
+      "route_adherence": {
+        "edge_type": "sidewalk",
+        "segment_start": {
+          "x": 9300.0,
+          "y": -4473.2925
+        },
+        "segment_end": {
+          "x": 9300.0,
+          "y": -9300.0
+        },
+        "progress": 0.020717953180299405,
+        "lateral_distance_cm": 0.0,
+        "corridor_half_width_cm": 200,
+        "transition_distance_cm": 99.99950000000081,
+        "end_transition_distance_cm": 4726.708,
+        "within_start_transition_envelope": false,
+        "within_end_transition_envelope": false,
+        "within_transition_envelope": false,
+        "within_corridor": true
+      },
+      "traffic_light_snapshot": null,
+      "execution_traffic_light_snapshot": null,
+      "feedback": "Action completed successfully.",
+      "collision_details": {
+        "collision_authority": "ue_counters_plus_launched_vehicle_swept_radius",
+        "human": 0,
+        "object": 0,
+        "building": 0,
+        "vehicle": 0,
+        "intensity": 0.0,
+        "touched_road": 0,
+        "ue_touched_road": 0,
+        "geometric_touched_road": 0,
+        "legal_authored_sidewalk": 1,
+        "legal_route_crosswalk": 0,
+        "legal_marked_crosswalk": 0,
+        "legal_non_route_crosswalk": 0,
+        "unsafe_touched_road": 0,
+        "ue_unsafe_touched_road": 0,
+        "illegal_crossing_detection_source": null,
+        "state_human": 0,
+        "state_object": 0,
+        "state_building": 0,
+        "ue_building_delta": 0,
+        "ue_physical_block_contact_kind": null,
+        "ue_physical_block_human": 0,
+        "ue_physical_block_object": 0,
+        "ue_physical_block_building": 0,
+        "mapped_building_proximity": 0,
+        "off_route_move_no_progress": 0,
+        "overlap_type": 0,
+        "hazard_overlap_new_episode": 0,
+        "hazard_overlap_suppressed": 0,
+        "fall": 0,
+        "oil": 0,
+        "water": 0
+      },
+      "passive_collision_details": {
+        "human": 0,
+        "object": 0,
+        "building": 0,
+        "vehicle": 0
+      },
+      "observation_geometry": {
+        "agent_position_cm": {
+          "x": 9300.0,
+          "y": -4573.292
+        },
+        "agent_direction": {
+          "x": 0.0,
+          "y": -1.0
+        },
+        "camera_location_cm": [
+          9300.0,
+          -4573.292,
+          230.958
+        ],
+        "camera_rotation_deg": [
+          -25.0,
+          90.0,
+          0.0
+        ],
+        "camera_horizontal_fov_deg": 100.0,
+        "all_waypoint_markers_visible": true,
+        "annotated_candidates": [
+          {
+            "index": 1,
+            "world_position_cm": {
+              "x": 9300.0,
+              "y": -4673.292
+            },
+            "image_pixel": [
+              360,
+              570
+            ],
+            "distance_cm": 100.0,
+            "relative_angle_deg": 0.0
+          },
+          {
+            "index": 2,
+            "world_position_cm": {
+              "x": 9300.0,
+              "y": -4773.292
+            },
+            "image_pixel": [
+              360,
+              439
+            ],
+            "distance_cm": 200.0,
+            "relative_angle_deg": 0.0
+          },
+          {
+            "index": 3,
+            "world_position_cm": {
+              "x": 9158.5786,
+              "y": -4714.7134
+            },
+            "image_pixel": [
+              163,
+              502
+            ],
+            "distance_cm": 200.00006188978938,
+            "relative_angle_deg": 45.0
+          },
+          {
+            "index": 4,
+            "world_position_cm": {
+              "x": 9441.4214,
+              "y": -4714.7134
+            },
+            "image_pixel": [
+              556,
+              502
+            ],
+            "distance_cm": 200.00006188978938,
+            "relative_angle_deg": -45.0
+          },
+          {
+            "index": 5,
+            "world_position_cm": {
+              "x": 9300.0,
+              "y": -4973.292
+            },
+            "image_pixel": [
+              360,
+              334
+            ],
+            "distance_cm": 400.0,
+            "relative_angle_deg": 0.0
+          },
+          {
+            "index": 6,
+            "world_position_cm": {
+              "x": 9017.1573,
+              "y": -4856.1347
+            },
+            "image_pixel": [
+              112,
+              382
+            ],
+            "distance_cm": 399.9999823582235,
+            "relative_angle_deg": 45.0
+          },
+          {
+            "index": 7,
+            "world_position_cm": {
+              "x": 9582.8427,
+              "y": -4856.1347
+            },
+            "image_pixel": [
+              607,
+              382
+            ],
+            "distance_cm": 399.9999823582235,
+            "relative_angle_deg": -45.0
+          }
+        ]
+      },
+      "waypoint_execution": null,
+      "evaluation_safety_events": {
+        "collision_authority": "ue_counters_plus_launched_vehicle_swept_radius",
+        "human": 0,
+        "object": 0,
+        "building": 0,
+        "vehicle": 0,
+        "intensity": 0.0,
+        "touched_road": 0,
+        "ue_touched_road": 0,
+        "geometric_touched_road": 0,
+        "legal_authored_sidewalk": 1,
+        "legal_route_crosswalk": 0,
+        "legal_marked_crosswalk": 0,
+        "legal_non_route_crosswalk": 0,
+        "unsafe_touched_road": 0,
+        "ue_unsafe_touched_road": 0,
+        "illegal_crossing_detection_source": null,
+        "state_human": 0,
+        "state_object": 0,
+        "state_building": 0,
+        "ue_building_delta": 0,
+        "ue_physical_block_contact_kind": null,
+        "ue_physical_block_human": 0,
+        "ue_physical_block_object": 0,
+        "ue_physical_block_building": 0,
+        "mapped_building_proximity": 0,
+        "off_route_move_no_progress": 0,
+        "overlap_type": 0,
+        "hazard_overlap_new_episode": 0,
+        "hazard_overlap_suppressed": 0,
+        "fall": 0,
+        "oil": 0,
+        "water": 0,
+        "during_inference": {
+          "human": 0,
+          "object": 0,
+          "building": 0,
+          "vehicle": 0
+        }
+      },
+      "evaluation": {}
+    },
+    {
+      "step": 2,
+      "decision": 3,
+      "raw_model_response": "{\"action_type\":\"wait\",\"action_param\":\"1\",\"reasoning\":null}",
+      "executed_action": {
+        "type": "wait",
+        "param": "1"
+      },
+      "execution_override": null,
+      "response_time_seconds": 0.0,
+      "actual_inference_wall_seconds": 0.0,
+      "modeled_thinking_latency_seconds": 0.0,
+      "realtime_control_overhead_seconds": 0.0,
+      "stagnation": {
+        "count": 2,
+        "max_count": 2,
+        "prompt_guidance_enabled": false
+      },
+      "concurrent_realtime_inference": false,
+      "sim_time_seconds": 2.5,
+      "position": {
+        "x": 9300.0,
+        "y": -4573.292
+      },
+      "route_adherence": {
+        "edge_type": "sidewalk",
+        "segment_start": {
+          "x": 9300.0,
+          "y": -4473.2925
+        },
+        "segment_end": {
+          "x": 9300.0,
+          "y": -9300.0
+        },
+        "progress": 0.020717953180299405,
+        "lateral_distance_cm": 0.0,
+        "corridor_half_width_cm": 200,
+        "transition_distance_cm": 99.99950000000081,
+        "end_transition_distance_cm": 4726.708,
+        "within_start_transition_envelope": false,
+        "within_end_transition_envelope": false,
+        "within_transition_envelope": false,
+        "within_corridor": true
+      },
+      "traffic_light_snapshot": null,
+      "execution_traffic_light_snapshot": null,
+      "feedback": "Action completed successfully.",
+      "collision_details": {
+        "collision_authority": "ue_counters_plus_launched_vehicle_swept_radius",
+        "human": 0,
+        "object": 0,
+        "building": 0,
+        "vehicle": 0,
+        "intensity": 0.0,
+        "touched_road": 0,
+        "ue_touched_road": 0,
+        "geometric_touched_road": 0,
+        "legal_authored_sidewalk": 1,
+        "legal_route_crosswalk": 0,
+        "legal_marked_crosswalk": 0,
+        "legal_non_route_crosswalk": 0,
+        "unsafe_touched_road": 0,
+        "ue_unsafe_touched_road": 0,
+        "illegal_crossing_detection_source": null,
+        "state_human": 0,
+        "state_object": 0,
+        "state_building": 0,
+        "ue_building_delta": 0,
+        "ue_physical_block_contact_kind": null,
+        "ue_physical_block_human": 0,
+        "ue_physical_block_object": 0,
+        "ue_physical_block_building": 0,
+        "mapped_building_proximity": 0,
+        "off_route_move_no_progress": 0,
+        "overlap_type": 0,
+        "hazard_overlap_new_episode": 0,
+        "hazard_overlap_suppressed": 0,
+        "fall": 0,
+        "oil": 0,
+        "water": 0
+      },
+      "passive_collision_details": {
+        "human": 0,
+        "object": 0,
+        "building": 0,
+        "vehicle": 0
+      },
+      "observation_geometry": {
+        "agent_position_cm": {
+          "x": 9300.0,
+          "y": -4573.292
+        },
+        "agent_direction": {
+          "x": -0.5,
+          "y": -0.866
+        },
+        "camera_location_cm": [
+          9300.0,
+          -4573.292,
+          230.958
+        ],
+        "camera_rotation_deg": [
+          -25.0,
+          120.0,
+          0.0
+        ],
+        "camera_horizontal_fov_deg": 100.0,
+        "all_waypoint_markers_visible": true,
+        "annotated_candidates": [
+          {
+            "index": 1,
+            "world_position_cm": {
+              "x": 9249.9989,
+              "y": -4659.8939
+            },
+            "image_pixel": [
+              359,
+              570
+            ],
+            "distance_cm": 99.99999542409935,
+            "relative_angle_deg": 1.489722959477604e-06
+          },
+          {
+            "index": 2,
+            "world_position_cm": {
+              "x": 9199.9978,
+              "y": -4746.4958
+            },
+            "image_pixel": [
+              359,
+              439
+            ],
+            "distance_cm": 199.99999084819962,
+            "relative_angle_deg": 1.4897233920330407e-06
+          },
+          {
+            "index": 3,
+            "world_position_cm": {
+              "x": 9106.8142,
+              "y": -4625.0534
+            },
+            "image_pixel": [
+              163,
+              502
+            ],
+            "distance_cm": 199.9999896289989,
+            "relative_angle_deg": 44.99998590073567
+          },
+          {
+            "index": 4,
+            "world_position_cm": {
+              "x": 9351.7614,
+              "y": -4766.4778
+            },
+            "image_pixel": [
+              556,
+              502
+            ],
+            "distance_cm": 199.9999896289989,
+            "relative_angle_deg": -45.00001409926433
+          },
+          {
+            "index": 5,
+            "world_position_cm": {
+              "x": 9099.9956,
+              "y": -4919.6996
+            },
+            "image_pixel": [
+              359,
+              334
+            ],
+            "distance_cm": 399.9999816963991,
+            "relative_angle_deg": 1.4897231121442286e-06
+          },
+          {
+            "index": 6,
+            "world_position_cm": {
+              "x": 8913.6284,
+              "y": -4676.8147
+            },
+            "image_pixel": [
+              112,
+              382
+            ],
+            "distance_cm": 399.99995337731,
+            "relative_angle_deg": 44.99999973665172
+          },
+          {
+            "index": 7,
+            "world_position_cm": {
+              "x": 9403.5227,
+              "y": -4959.6636
+            },
+            "image_pixel": [
+              607,
+              382
+            ],
+            "distance_cm": 399.99995337730917,
+            "relative_angle_deg": -45.00000026334831
+          }
+        ]
+      },
+      "waypoint_execution": null,
+      "evaluation_safety_events": {
+        "collision_authority": "ue_counters_plus_launched_vehicle_swept_radius",
+        "human": 0,
+        "object": 0,
+        "building": 0,
+        "vehicle": 0,
+        "intensity": 0.0,
+        "touched_road": 0,
+        "ue_touched_road": 0,
+        "geometric_touched_road": 0,
+        "legal_authored_sidewalk": 1,
+        "legal_route_crosswalk": 0,
+        "legal_marked_crosswalk": 0,
+        "legal_non_route_crosswalk": 0,
+        "unsafe_touched_road": 0,
+        "ue_unsafe_touched_road": 0,
+        "illegal_crossing_detection_source": null,
+        "state_human": 0,
+        "state_object": 0,
+        "state_building": 0,
+        "ue_building_delta": 0,
+        "ue_physical_block_contact_kind": null,
+        "ue_physical_block_human": 0,
+        "ue_physical_block_object": 0,
+        "ue_physical_block_building": 0,
+        "mapped_building_proximity": 0,
+        "off_route_move_no_progress": 0,
+        "overlap_type": 0,
+        "hazard_overlap_new_episode": 0,
+        "hazard_overlap_suppressed": 0,
+        "fall": 0,
+        "oil": 0,
+        "water": 0,
+        "during_inference": {
+          "human": 0,
+          "object": 0,
+          "building": 0,
+          "vehicle": 0
+        }
+      },
+      "evaluation": {}
+    }
+  ],
+  "safe_trajectory_history": [],
+  "replanning_quality": {
+    "step_records": [],
+    "summary": {
+      "total_steps": 0,
+      "evaluation_coverage": {
+        "attempted_decisions": 3,
+        "evaluated_decisions": 0,
+        "unevaluated_decisions": 3,
+        "invalid_decisions": 0,
+        "evaluation_coverage_rate": 0.0,
+        "optimal_choice_rate_all_decisions": 0.0
+      }
+    }
+  },
+  "record_type": "controlled_native_task_excerpt",
+  "complete_navigation_run": false
+}

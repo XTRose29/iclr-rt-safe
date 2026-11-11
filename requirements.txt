@@ -1,0 +1,14 @@
+# Python 3.12, Linux.
+IPython==9.17.0
+numpy==2.5.2
+openai==3.6.0
+websockets==15.0.1
+opencv-python-headless==5.0.0.93
+pandas==3.0.5
+pillow==12.3.0
+pydantic==2.13.5
+PyQt5==5.15.11
+PyYAML==6.0.3
+requests==2.34.2
+unrealcv==1.2.0
+networkx==3.6.1

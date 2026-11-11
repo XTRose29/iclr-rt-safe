@@ -1,0 +1,254 @@
+[
+  {
+    "task_id": 0,
+    "map": "map1_10roads",
+    "ue_map": "RT10",
+    "task_index": 0,
+    "task_file": "data/map1_10roads/tasks.json"
+  },
+  {
+    "task_id": 1,
+    "map": "map1_10roads",
+    "ue_map": "RT10",
+    "task_index": 1,
+    "task_file": "data/map1_10roads/tasks.json"
+  },
+  {
+    "task_id": 2,
+    "map": "map1_10roads",
+    "ue_map": "RT10",
+    "task_index": 2,
+    "task_file": "data/map1_10roads/tasks.json"
+  },
+  {
+    "task_id": 3,
+    "map": "map1_10roads",
+    "ue_map": "RT10",
+    "task_index": 3,
+    "task_file": "data/map1_10roads/tasks.json"
+  },
+  {
+    "task_id": 8,
+    "map": "map2_12roads",
+    "ue_map": "RT12",
+    "task_index": 0,
+    "task_file": "data/map2_12roads/tasks.json"
+  },
+  {
+    "task_id": 9,
+    "map": "map2_12roads",
+    "ue_map": "RT12",
+    "task_index": 1,
+    "task_file": "data/map2_12roads/tasks.json"
+  },
+  {
+    "task_id": 10,
+    "map": "map2_12roads",
+    "ue_map": "RT12",
+    "task_index": 2,
+    "task_file": "data/map2_12roads/tasks.json"
+  },
+  {
+    "task_id": 11,
+    "map": "map2_12roads",
+    "ue_map": "RT12",
+    "task_index": 3,
+    "task_file": "data/map2_12roads/tasks.json"
+  },
+  {
+    "task_id": 12,
+    "map": "map2_12roads",
+    "ue_map": "RT12",
+    "task_index": 4,
+    "task_file": "data/map2_12roads/tasks.json"
+  },
+  {
+    "task_id": 13,
+    "map": "map2_12roads",
+    "ue_map": "RT12",
+    "task_index": 5,
+    "task_file": "data/map2_12roads/tasks.json"
+  },
+  {
+    "task_id": 14,
+    "map": "map2_12roads",
+    "ue_map": "RT12",
+    "task_index": 6,
+    "task_file": "data/map2_12roads/tasks.json"
+  },
+  {
+    "task_id": 15,
+    "map": "map2_12roads",
+    "ue_map": "RT12",
+    "task_index": 7,
+    "task_file": "data/map2_12roads/tasks.json"
+  },
+  {
+    "task_id": 16,
+    "map": "map3_15roads",
+    "ue_map": "RT15",
+    "task_index": 0,
+    "task_file": "data/map3_15roads/tasks.json"
+  },
+  {
+    "task_id": 17,
+    "map": "map3_15roads",
+    "ue_map": "RT15",
+    "task_index": 1,
+    "task_file": "data/map3_15roads/tasks.json"
+  },
+  {
+    "task_id": 18,
+    "map": "map3_15roads",
+    "ue_map": "RT15",
+    "task_index": 2,
+    "task_file": "data/map3_15roads/tasks.json"
+  },
+  {
+    "task_id": 19,
+    "map": "map3_15roads",
+    "ue_map": "RT15",
+    "task_index": 3,
+    "task_file": "data/map3_15roads/tasks.json"
+  },
+  {
+    "task_id": 20,
+    "map": "map3_15roads",
+    "ue_map": "RT15",
+    "task_index": 4,
+    "task_file": "data/map3_15roads/tasks.json"
+  },
+  {
+    "task_id": 21,
+    "map": "map3_15roads",
+    "ue_map": "RT15",
+    "task_index": 5,
+    "task_file": "data/map3_15roads/tasks.json"
+  },
+  {
+    "task_id": 22,
+    "map": "map3_15roads",
+    "ue_map": "RT15",
+    "task_index": 6,
+    "task_file": "data/map3_15roads/tasks.json"
+  },
+  {
+    "task_id": 23,
+    "map": "map3_15roads",
+    "ue_map": "RT15",
+    "task_index": 7,
+    "task_file": "data/map3_15roads/tasks.json"
+  },
+  {
+    "task_id": 24,
+    "map": "map4_18roads",
+    "ue_map": "RT18",
+    "task_index": 0,
+    "task_file": "data/map4_18roads/tasks.json"
+  },
+  {
+    "task_id": 25,
+    "map": "map4_18roads",
+    "ue_map": "RT18",
+    "task_index": 1,
+    "task_file": "data/map4_18roads/tasks.json"
+  },
+  {
+    "task_id": 26,
+    "map": "map4_18roads",
+    "ue_map": "RT18",
+    "task_index": 2,
+    "task_file": "data/map4_18roads/tasks.json"
+  },
+  {
+    "task_id": 27,
+    "map": "map4_18roads",
+    "ue_map": "RT18",
+    "task_index": 3,
+    "task_file": "data/map4_18roads/tasks.json"
+  },
+  {
+    "task_id": 28,
+    "map": "map4_18roads",
+    "ue_map": "RT18",
+    "task_index": 4,
+    "task_file": "data/map4_18roads/tasks.json"
+  },
+  {
+    "task_id": 29,
+    "map": "map4_18roads",
+    "ue_map": "RT18",
+    "task_index": 5,
+    "task_file": "data/map4_18roads/tasks.json"
+  },
+  {
+    "task_id": 30,
+    "map": "map4_18roads",
+    "ue_map": "RT18",
+    "task_index": 6,
+    "task_file": "data/map4_18roads/tasks.json"
+  },
+  {
+    "task_id": 31,
+    "map": "map4_18roads",
+    "ue_map": "RT18",
+    "task_index": 7,
+    "task_file": "data/map4_18roads/tasks.json"
+  },
+  {
+    "task_id": 32,
+    "map": "map5_20roads",
+    "ue_map": "RT20",
+    "task_index": 0,
+    "task_file": "data/map5_20roads/tasks.json"
+  },
+  {
+    "task_id": 33,
+    "map": "map5_20roads",
+    "ue_map": "RT20",
+    "task_index": 1,
+    "task_file": "data/map5_20roads/tasks.json"
+  },
+  {
+    "task_id": 34,
+    "map": "map5_20roads",
+    "ue_map": "RT20",
+    "task_index": 2,
+    "task_file": "data/map5_20roads/tasks.json"
+  },
+  {
+    "task_id": 35,
+    "map": "map5_20roads",
+    "ue_map": "RT20",
+    "task_index": 3,
+    "task_file": "data/map5_20roads/tasks.json"
+  },
+  {
+    "task_id": 36,
+    "map": "map5_20roads",
+    "ue_map": "RT20",
+    "task_index": 4,
+    "task_file": "data/map5_20roads/tasks.json"
+  },
+  {
+    "task_id": 37,
+    "map": "map5_20roads",
+    "ue_map": "RT20",
+    "task_index": 5,
+    "task_file": "data/map5_20roads/tasks.json"
+  },
+  {
+    "task_id": 38,
+    "map": "map5_20roads",
+    "ue_map": "RT20",
+    "task_index": 6,
+    "task_file": "data/map5_20roads/tasks.json"
+  },
+  {
+    "task_id": 39,
+    "map": "map5_20roads",
+    "ue_map": "RT20",
+    "task_index": 7,
+    "task_file": "data/map5_20roads/tasks.json"
+  }
+]
