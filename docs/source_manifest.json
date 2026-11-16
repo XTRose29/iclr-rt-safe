@@ -577,7 +577,7 @@
     {
       "path": "base/rt_agent.py",
       "september_sha256": "2bd5949edcec02b8cff3b3bb0bbacd5d86b7536f4907726b74582ebd8150f1ea",
-      "release_sha256": "91dffcfc8dcbd37f635e52943611005963a189a509fd600947a3b081eacf58cf",
+      "release_sha256": "4f32c4c823e92acdf2423c9cf6eff41ff0a9f5bbe6a9b572705a87e6f52cb221",
       "change_category": "release_cleanup",
       "runtime_update": true
     },
@@ -948,7 +948,7 @@
     {
       "path": "evaluation/run_qwen3vl8b_all_maps.py",
       "september_sha256": "a3fed49d2ad69542697de4c887b4f711519dfb8af0a3521de64667d4a348185d",
-      "release_sha256": "d8767f0fc01b114aacb72ce272750de08d874a8803d498acfb24956ef35e6333",
+      "release_sha256": "96b98eeb376a8b7b644cf0bb0ec52cd26898b99de18a18f7674f6aa26e21011f",
       "changes": [
         "Local deployment paths replaced with repository-relative or environment-configurable paths; benchmark logic unchanged."
       ],
@@ -963,7 +963,7 @@
     {
       "path": "llm/prompt.py",
       "september_sha256": "5d9e319e94002fe8ca03317fa350bf745480597a9462798329b625690b5b9c1b",
-      "release_sha256": "0d68624cefa19f19651a606e08f9d4ebcb170a67f8fd2c22d13617e0a09703d0",
+      "release_sha256": "1dd86e678173835269d4917a49330264b4dd3225e2183dc2196445a006126fa5",
       "change_category": "prompt_alignment"
     },
     {
@@ -981,7 +981,7 @@
     {
       "path": "manager/world_manager.py",
       "september_sha256": "13436e4843b6d4a9b48d3bec9a94c6a94b5650dd2a367a0d37ffb1eb52f160a1",
-      "release_sha256": "b89202a77fc370cf37ba90799a580cb7f3b050d0d7bd760f918410a76ff3e52c",
+      "release_sha256": "f770892ca40b898791cba725eb4cb18f3d088979b8fb824a14fcf29d5bb36602",
       "change_category": "release_cleanup",
       "runtime_update": true
     },

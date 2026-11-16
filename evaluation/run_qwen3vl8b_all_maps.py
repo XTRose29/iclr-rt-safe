@@ -489,6 +489,20 @@ def build_suite_config(
             for item in plan
         ],
     }
+    config.update({
+        'prompt_timing_mode': getattr(args, 'prompt_timing_mode', 'auto'),
+        'fixed_thinking_seconds': getattr(args, 'fixed_thinking_seconds', None),
+        'reasoning_effort': getattr(args, 'reasoning_effort', None),
+        'control_mode': getattr(args, 'control_mode', 'llm'),
+        'stationary_horizon_seconds': getattr(args, 'stationary_horizon_seconds', 60.0),
+    })
+    # Read the authoritative literal without importing the UE runtime.
+    import ast
+    tree = ast.parse((Path(__file__).resolve().parents[1] / 'manager/world_manager.py').read_text())
+    for node in tree.body:
+        if isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id == 'SCRIPTED_PEDESTRIAN_MOTION_POLICY' for t in node.targets):
+            config['scripted_pedestrian_motion_policy'] = ast.literal_eval(node.value)
+            break
     if source_provenance is not None:
         config["source_provenance"] = source_provenance
     config["experiment_contract"] = {
@@ -1714,7 +1728,15 @@ def run_agent_until_terminal(manager) -> None:
             break
         if getattr(manager.agent, "failed", False):
             break
+        if manager.control_mode == 'stationary':
+            horizon = float(os.environ.get('SIMWORLD_STATIONARY_HORIZON_SECONDS', '60'))
+            if manager.agent.sim_time_elapsed >= horizon:
+                manager.agent.stationary_horizon_reached = True
+                break
         manager.agent.step(mode=manager.control_mode)
+        if manager.control_mode == 'stationary' and manager.agent.collision_count > 0:
+            if getattr(manager.agent, 'stationary_first_recorded_contact_s', None) is None:
+                manager.agent.stationary_first_recorded_contact_s = manager.agent.sim_time_elapsed
     if getattr(manager.agent, "success", False):
         manager._drain_signal_traffic_after_agent_completion()
 
@@ -1876,6 +1898,8 @@ def error_record_is_retryable(record: dict[str, Any]) -> bool:
 
 def rollout_reached_terminal_state(result: dict[str, Any]) -> bool:
     """Distinguish valid task failure from an episode cut short by UE I/O."""
+    if result.get("termination_reason") == "stationary_horizon":
+        return True
     if result.get("success") is True or result.get("failed") is True:
         return True
     try:
@@ -1994,6 +2018,10 @@ def write_agent_config(path: Path, args: argparse.Namespace) -> None:
     extra_body: dict[str, Any] = {
         "chat_template_kwargs": {"enable_thinking": args.enable_thinking}
     }
+    effort = getattr(args, 'reasoning_effort', None)
+    if effort is not None:
+        extra_body['reasoning_effort'] = effort
+        extra_body['chat_template_kwargs']['reasoning_effort'] = effort
     if reasoning_budget_tokens is not None:
         extra_body.update(
             {
@@ -2041,6 +2069,8 @@ def ensure_qwen_ready_and_sync_agent_config(
     args: argparse.Namespace,
 ) -> None:
     """Keep rollout requests aligned with the model ID served after a restart."""
+    if getattr(args, 'control_mode', 'llm') != 'llm':
+        return
     qwen.ensure_ready()
     # ensure_ready() may resolve a semantically equivalent endpoint alias.  The
     # rollout reads its model ID from this file, so refresh it before UE starts.
@@ -2151,7 +2181,7 @@ def execute_rollout(
                 agent_path=str(agent_config),
                 task_file_path=spec.task_file,
                 seed=args.seed + spec.round_id - 1,
-                control_mode="llm",
+                control_mode=getattr(args, "control_mode", "llm"),
                 token_based=args.token_based,
                 use_tick=True,
                 realtime_thinking=spec.realtime_thinking,
@@ -2423,6 +2453,11 @@ def aggregate_summary(
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--prompt-timing-mode", choices=['auto', 'neutral', 'static', 'realtime'], default='auto')
+    parser.add_argument("--fixed-thinking-seconds", type=float, default=None)
+    parser.add_argument("--reasoning-effort", choices=['low', 'medium', 'xhigh'], default=None)
+    parser.add_argument("--control-mode", choices=['llm', 'greedy', 'safety', 'stationary'], default='llm')
+    parser.add_argument("--stationary-horizon-seconds", type=float, default=60.0)
     parser.add_argument("--suite-name", default=None)
     parser.add_argument("--benchmark-profile-path", default=None)
     parser.add_argument("--output-root", default="results")
@@ -2770,11 +2805,31 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
             "unless --difficulties supplies another single difficulty."
         ),
     )
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    delay = args.fixed_thinking_seconds
+    if delay is not None and (not math.isfinite(delay) or delay < 0):
+        parser.error('--fixed-thinking-seconds must be finite and nonnegative')
+    if delay is not None and args.token_based:
+        parser.error('Fixed delay and token-based time are mutually exclusive')
+    if args.prompt_timing_mode == 'neutral' and args.prompt_style != 'instructional':
+        parser.error('Neutral timing requires instructional prompt style')
+    if not math.isfinite(args.stationary_horizon_seconds) or args.stationary_horizon_seconds <= 0:
+        parser.error('Stationary horizon must be finite and positive')
+    if args.reasoning_effort and not args.enable_thinking:
+        parser.error('Reasoning effort requires --enable-thinking')
+    return args
 
 
 def configure_benchmark_environment(args: argparse.Namespace) -> None:
     """Apply profile controls without changing benchmark evaluation semantics."""
+    os.environ['SIMWORLD_PROMPT_TIMING_MODE'] = getattr(args, 'prompt_timing_mode', 'auto')
+    delay = getattr(args, 'fixed_thinking_seconds', None)
+    if delay is None:
+        os.environ.pop('SIMWORLD_FIXED_THINKING_SECONDS', None)
+    else:
+        os.environ['SIMWORLD_FIXED_THINKING_SECONDS'] = str(delay)
+    os.environ['SIMWORLD_STATIONARY_HORIZON_SECONDS'] = str(getattr(args, 'stationary_horizon_seconds', 60.0))
+    os.environ['CODE_BASELINE_THINKING_SECONDS'] = '0.0'
     os.environ["SIMWORLD_RECORD_PNG_COMPRESS_LEVEL"] = str(
         args.record_png_compress_level
     )
@@ -2892,7 +2947,7 @@ def main(argv: list[str] | None = None) -> int:
     # An external vLLM service commonly exposes the official Hugging Face ID,
     # while this runner's historical default is the shorter local alias. Use
     # the exact served ID in both the immutable suite record and every request.
-    if not args.plan_only:
+    if not args.plan_only and args.control_mode == "llm":
         resolved_model = resolve_qwen_model_id(
             args.model,
             qwen_model_ids(args.qwen_url),
@@ -3061,7 +3116,7 @@ def main(argv: list[str] | None = None) -> int:
             )
             record: dict[str, Any] | None = None
             for cell_attempt in range(1, args.cell_max_attempts + 1):
-                if not qwen_ready(args.qwen_url, args.model):
+                if args.control_mode == "llm" and not qwen_ready(args.qwen_url, args.model):
                     print(
                         f"[all-maps] Qwen unavailable before cell attempt {cell_attempt}; restarting",
                         flush=True,
@@ -3086,7 +3141,7 @@ def main(argv: list[str] | None = None) -> int:
                 archived = archive_partial_attempt(
                     run_dir_for(suite_dir, spec), f"cell_attempt_{cell_attempt:02d}"
                 )
-                if not qwen_ready(args.qwen_url, args.model):
+                if args.control_mode == "llm" and not qwen_ready(args.qwen_url, args.model):
                     qwen.stop()
                 print(
                     f"[all-maps] retrying whole cell after error "

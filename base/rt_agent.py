@@ -103,7 +103,7 @@ POLICY_ACTION_FRAME_INTERVAL_S = 0.5
 # thousandths of a centimetre after rollback. Treat those numerically
 # equivalent targets as the same intended move for repetition accounting.
 BUILDING_COLLISION_SAME_TARGET_TOLERANCE_CM = 1.0
-CODE_BASELINE_MODES = {'greedy', 'baseline_greedy', 'safety', 'baseline_safety'}
+CODE_BASELINE_MODES = {'greedy', 'baseline_greedy', 'safety', 'baseline_safety', 'stationary'}
 FILTERED_LLM_MODES = {'llm_safety_filter'}
 WAYPOINT_REACHED_TOLERANCE_CM = 25.0
 # UE exposes only a coarse overlap class rather than overlap begin/end events.
@@ -474,6 +474,18 @@ class RTAgent(BaseAgent):
         # - 'adaptive' = decide per step whether to output reasoning
         # - 'naive' = direct output only (Action+Param)
         self.prompt_style = prompt_style
+        self.prompt_timing_mode = os.environ.get('SIMWORLD_PROMPT_TIMING_MODE', 'auto')
+        if self.prompt_timing_mode not in {'auto', 'neutral', 'static', 'realtime'}:
+            raise ValueError('Invalid SIMWORLD_PROMPT_TIMING_MODE')
+        if self.prompt_timing_mode == 'neutral' and self.prompt_style != 'instructional':
+            raise ValueError('Neutral timing is supported for instructional prompts only')
+        raw_delay = os.environ.get('SIMWORLD_FIXED_THINKING_SECONDS')
+        self.fixed_thinking_seconds = None if raw_delay is None else float(raw_delay)
+        if self.fixed_thinking_seconds is not None:
+            if not math.isfinite(self.fixed_thinking_seconds) or self.fixed_thinking_seconds < 0:
+                raise ValueError('Fixed thinking seconds must be finite and nonnegative')
+            if token_based:
+                raise ValueError('Fixed delay and token-based time are mutually exclusive')
 
         self.step_num = 0
         # evaluation
@@ -743,6 +755,7 @@ class RTAgent(BaseAgent):
             getattr(self, 'concurrent_realtime_inference', True)
             and self.realtime_thinking
             and not self.token_based
+            and getattr(self, "fixed_thinking_seconds", None) is None
             and not self._is_code_baseline_mode(mode)
         )
         concurrent_started = None
@@ -822,9 +835,26 @@ class RTAgent(BaseAgent):
         if self.step_num > 0:       # do not count the first step
             self.avg_response_time = (self.avg_response_time * (self.step_num - 1) + time_cost) / self.step_num
         
+        # Controlled delay advances the world exactly once even on parse failures.
+        # Inference wall time is measured separately while UE remains paused.
+        fixed_delay = getattr(self, 'fixed_thinking_seconds', None)
+        if fixed_delay is not None and self.realtime_thinking:
+            modeled_thinking_seconds = fixed_delay
+            if fixed_delay > 0:
+                if thinking_pose is None:
+                    self._advance_simulation_time(fixed_delay)
+                else:
+                    self._advance_stationary_action_with_pose_lock(fixed_delay, *thinking_pose)
+        if prompt_data is not None:
+            prompt_data['experiment_timing'] = {
+                'prompt_timing_mode': getattr(self, 'prompt_timing_mode', 'auto'),
+                'fixed_thinking_seconds': fixed_delay,
+                'environment_timing_mode': 'realtime' if self.realtime_thinking else 'static',
+            }
+
         # 2.5. With realtime_thinking, advance simulation time for thinking period (agent stays idle)
         # If realtime_thinking is False, environment is paused during thinking
-        if self.realtime_thinking and concurrent_thinking_seconds is None:
+        if self.realtime_thinking and concurrent_thinking_seconds is None and fixed_delay is None:
             if self._is_code_baseline_mode(mode):
                 thinking_time = baseline_thinking_seconds()
             elif self.token_based:
@@ -2883,6 +2913,8 @@ class RTAgent(BaseAgent):
         )
 
     def _baseline_name(self, mode: str) -> str:
+        if mode == 'stationary':
+            return mode
         return 'safety' if 'safety' in mode else 'greedy'
 
     def _relative_angle_to(self, target_position: Vector) -> float:
@@ -3158,7 +3190,11 @@ class RTAgent(BaseAgent):
     def _plan_code_baseline(self, observation: dict, mode: str):
         waypoints = observation['waypoints']
         baseline_name = self._baseline_name(mode)
-        if baseline_name == 'safety':
+        if baseline_name == 'stationary':
+            action = RTActionSpace(action_type=WAIT, action_param='1', reasoning='Stationary exposure control.')
+            details = {'selection_rule': 'wait_one_second', 'navigation_baseline': False}
+            safety_preview = None
+        elif baseline_name == 'safety':
             action, details = self._safety_baseline_action(waypoints)
             safety_preview = details.get('action_safety_preview')
         else:
@@ -3287,7 +3323,13 @@ class RTAgent(BaseAgent):
                 if traffic_light_context
                 else ""
             )
-            if self.realtime_thinking:
+            prompt_mode = getattr(self, 'prompt_timing_mode', 'auto')
+            prompt_realtime = (None if prompt_mode == 'neutral' else
+                               self.realtime_thinking if prompt_mode == 'auto' else
+                               prompt_mode == 'realtime')
+            if prompt_realtime is None:
+                timing_context = "Select one action using the current observations and recorded history."
+            elif prompt_realtime:
                 timing_context = (
                     "The environment may continue moving while you are reasoning before the action starts. "
                     "Account for both reasoning delay and action duration."
@@ -3346,7 +3388,7 @@ class RTAgent(BaseAgent):
                         self.realtime_thinking
                     )
                 else:
-                    system_prompt = get_system_prompt(self.realtime_thinking)
+                    system_prompt = get_system_prompt(prompt_realtime)
                 if prompt_suffix:
                     system_prompt = (
                         f"{system_prompt.rstrip()}\n\n{prompt_suffix.strip()}"
@@ -3575,6 +3617,9 @@ class RTAgent(BaseAgent):
         """Estimate how long the world will evolve before the selected action starts."""
         if not self.realtime_thinking:
             return 0.0
+
+        if getattr(self, 'fixed_thinking_seconds', None) is not None:
+            return self.fixed_thinking_seconds
 
         if self.token_based:
             if self.decision_count > 0 and self.total_completion_tokens > 0:

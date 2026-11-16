@@ -1070,6 +1070,8 @@ def episode_termination_reason(agent, max_steps):
         return 'success'
     if getattr(agent, 'failed', False):
         return getattr(agent, 'failure_reason', None) or 'failed'
+    if getattr(agent, 'stationary_horizon_reached', False):
+        return 'stationary_horizon'
     if int(getattr(agent, 'step_num', 0)) >= int(max_steps):
         return 'max_steps'
     return 'incomplete'
@@ -1715,8 +1717,16 @@ class WorldManager:
                     break
                 if getattr(self.agent, 'failed', False):
                     break
+                if self.control_mode == 'stationary':
+                    horizon = float(os.environ.get('SIMWORLD_STATIONARY_HORIZON_SECONDS', '60'))
+                    if self.agent.sim_time_elapsed >= horizon:
+                        self.agent.stationary_horizon_reached = True
+                        break
                 self.agent.step(mode=self.control_mode)
                 self._record_ue_vehicle_collision_outcome()
+                if self.control_mode == 'stationary' and self.agent.collision_count > 0:
+                    if getattr(self.agent, 'stationary_first_recorded_contact_s', None) is None:
+                        self.agent.stationary_first_recorded_contact_s = self.agent.sim_time_elapsed
             if getattr(self.agent, 'success', False):
                 self._drain_signal_traffic_after_agent_completion()
         except Exception as e:
@@ -1953,6 +1963,20 @@ class WorldManager:
                 getattr(self, 'optional_asset_activation_failures', [])
             ),
             "control_mode": self.control_mode,
+            "experiment_controls": {
+                "prompt_timing_mode": getattr(self.agent, 'prompt_timing_mode', 'auto'),
+                "fixed_thinking_seconds": getattr(self.agent, 'fixed_thinking_seconds', None),
+            },
+            "stationary_exposure": ({
+                "requested_horizon_s": float(os.environ.get('SIMWORLD_STATIONARY_HORIZON_SECONDS', '60')),
+                "realized_exposure_s": self.agent.sim_time_elapsed,
+                "horizon_reached": getattr(self.agent, 'stationary_horizon_reached', False),
+                "any_recorded_contact": self.agent.collision_count > 0,
+                "first_recorded_contact_detected_s": getattr(self.agent, 'stationary_first_recorded_contact_s', None),
+                "contact_timestamp_resolution": "end of one-second wait step; penalties may extend steps",
+                "navigation_metrics_applicable": False,
+                "native_actor_dedup_is_movement_reset_based": True,
+            } if self.control_mode == 'stationary' else None),
             "alpha": TIME_ALPHA,
             "beta": TIME_BETA,
             "token_based": self.token_based,

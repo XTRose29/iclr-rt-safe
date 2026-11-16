@@ -78,7 +78,8 @@ def get_system_prompt(
         " At each step, choose an action that is safe, efficient, and temporally robust."
     )
 
-    timing_reminder = realtime_reminder if realtime_thinking else static_reminder
+    timing_reminder = ("" if realtime_thinking is None else
+                       realtime_reminder if realtime_thinking else static_reminder)
     intro = base_intro + timing_reminder + closing
 
     if action_only:

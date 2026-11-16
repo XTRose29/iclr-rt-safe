@@ -1,0 +1,27 @@
+{
+  "task_manifest": "configs/paper_tasks.json",
+  "seed": 0,
+  "difficulty": "hard",
+  "prompt_style": "instructional",
+  "prompt_timing_mode": "neutral",
+  "traffic_policy": "visual_only",
+  "rounds": 1,
+  "use_action_frames": true,
+  "observation": {
+    "width": 720,
+    "height": 640,
+    "fov_degrees": 100,
+    "pitch_degrees": -25
+  },
+  "conditions": [
+    {
+      "name": "stationary_60s",
+      "env_mode": "realtime",
+      "control_mode": "stationary",
+      "reasoning_effort": null,
+      "fixed_thinking_seconds": 0.0,
+      "stationary_horizon_seconds": 60,
+      "max_steps": 120
+    }
+  ]
+}

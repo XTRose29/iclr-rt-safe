@@ -1,0 +1,64 @@
+{
+  "task_manifest": "configs/paper_tasks.json",
+  "seed": 0,
+  "difficulty": "hard",
+  "env_mode": "realtime",
+  "fixed_decision_delays_seconds": [
+    0,
+    1
+  ],
+  "decision_budget": "task.max_steps",
+  "action_space": {
+    "move": {
+      "1": {
+        "distance_m": 1,
+        "heading_offset_degrees": 0
+      },
+      "2": {
+        "distance_m": 2,
+        "heading_offset_degrees": 0
+      },
+      "3": {
+        "distance_m": 2,
+        "heading_offset_degrees": 45
+      },
+      "4": {
+        "distance_m": 2,
+        "heading_offset_degrees": -45
+      },
+      "5": {
+        "distance_m": 4,
+        "heading_offset_degrees": 0
+      },
+      "6": {
+        "distance_m": 4,
+        "heading_offset_degrees": 45
+      },
+      "7": {
+        "distance_m": 4,
+        "heading_offset_degrees": -45
+      }
+    },
+    "turn_degrees": [
+      -90,
+      -60,
+      -30,
+      30,
+      60,
+      90
+    ],
+    "wait_seconds": [
+      1,
+      2,
+      3
+    ]
+  },
+  "policy": "privileged_state_trajectory_search",
+  "validation": {
+    "simulator": "Unreal Engine",
+    "require_success": true,
+    "maximum_recorded_safety_events": 0,
+    "advance_world_during_delay": true,
+    "advance_world_during_actions": true
+  }
+}
