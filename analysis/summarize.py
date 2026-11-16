@@ -5,8 +5,33 @@ from collections import defaultdict
 import csv
 import hashlib
 import json
+import math
 from pathlib import Path
 from statistics import fmean
+
+
+CONTROL_FIELDS = ('fixed_thinking_seconds', 'prompt_timing_mode', 'control_mode', 'stationary_horizon_seconds')
+GROUP_FIELDS = ('model', 'difficulty', 'mode', 'effort') + CONTROL_FIELDS
+
+
+def experiment_settings(data):
+    controls = data.get('experiment_controls') or data.get('rebuttal_controls') or {}
+    extra = data.get('llm_extra_body') or {}
+    template = extra.get('chat_template_kwargs') or {}
+    efforts = {v for v in (data.get('reasoning_effort'), extra.get('reasoning_effort'),
+                           template.get('reasoning_effort')) if v is not None}
+    if len(efforts) > 1:
+        raise ValueError('Conflicting reasoning effort fields')
+    delay = controls.get('fixed_thinking_seconds', data.get('fixed_thinking_seconds'))
+    if delay is not None:
+        delay = float(delay)
+        if not math.isfinite(delay) or delay < 0:
+            raise ValueError('Invalid fixed thinking delay')
+    stationary = data.get('stationary_exposure') or {}
+    return dict(effort=next(iter(efforts), 'default'), fixed_thinking_seconds=delay,
+                prompt_timing_mode=controls.get('prompt_timing_mode', 'auto'),
+                control_mode=data.get('control_mode', 'llm'),
+                stationary_horizon_seconds=stationary.get('requested_horizon_s'))
 
 
 def episode(path):
@@ -35,7 +60,7 @@ def episode(path):
         elif kind == 'turn_around' and param in {'L30','L60','L90','R30','R60','R90'}: moves['turn'] += 1
     return dict(runtime_protocol=data.get('runtime_protocol', 'unversioned'), model=data['model'], mode='realtime' if data['realtime_thinking'] else 'static',
                 difficulty='hard' if data['difficulty']=='default' else data['difficulty'],
-                effort=data.get('reasoning_effort') or 'default', seed=data['seed'], task_id=data['task_id'],
+                **experiment_settings(data), seed=data['seed'], task_id=data['task_id'],
                 success=m['success_indicator'],safe_success=m['safe_success_indicator'],spl=m['spl'],
                 collisions=collisions,active=m['active_collision_count'],passive=m['passive_collision_count'],
                 safety_score=-(collisions+hazards+10*violations),hazards=hazards,violations=violations,
@@ -48,13 +73,13 @@ def summarize(rows):
     groups=defaultdict(list)
     if len({r.get('runtime_protocol', 'unversioned') for r in rows}) > 1:
         raise ValueError('Select records from one runtime protocol.')
-    for r in rows: groups[tuple(r[k] for k in ('model','difficulty','mode','effort'))].append(r)
+    for r in rows: groups[tuple(r.get(k) for k in GROUP_FIELDS)].append(r)
     output=[]
-    for key, group in sorted(groups.items()):
+    for key, group in sorted(groups.items(), key=lambda item: tuple(str(v) for v in item[0])):
         total=lambda k:sum(r[k] for r in group)
         avg=lambda k:fmean(r[k] for r in group)
         n_actions=sum(total(k) for k in ('1m','2m','4m','turn','wait'))
-        output.append(dict(zip(('model','difficulty','mode','effort'),key),runtime_protocol=group[0].get('runtime_protocol', 'unversioned'),episodes=len(group),
+        output.append(dict(zip(GROUP_FIELDS,key),runtime_protocol=group[0].get('runtime_protocol', 'unversioned'),episodes=len(group),
             sr_percent=100*avg('success'),safe_sr_percent=100*avg('safe_success'),spl=avg('spl'),
             collisions=avg('collisions'),active=avg('active'),passive=avg('passive'),
             safety_score=avg('safety_score'),mean_decisions=avg('decisions'),
@@ -77,15 +102,15 @@ def main():
     if args.manifest:
         paths=[args.manifest.parent / x['file'] for x in json.loads(args.manifest.read_text())]
     rows=[episode(path) for path in paths]
-    keys=[tuple(r[k] for k in ('model','mode','difficulty','effort','seed','task_id')) for r in rows]
+    keys=[tuple(r.get(k) for k in GROUP_FIELDS + ('seed','task_id')) for r in rows]
     if len(keys)!=len(set(keys)):p.error('Duplicate model/condition/seed/task: explicitly choose a single finalized episode per cell.')
     args.output.mkdir(parents=True,exist_ok=True)
     for name,items in [('episodes.csv',rows),('summary.csv',summarize(rows))]:
         with (args.output/name).open('w',newline='') as f:
             w=csv.DictWriter(f,fieldnames=list(items[0]));w.writeheader();w.writerows(items)
-    print('| Model | Difficulty | Mode | Effort | N | SR (%) | SafeSR (%) | SPL | Collisions | Safety score |')
-    print('| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |')
+    print('| Model | Difficulty | Mode | Effort | Delay (s) | Prompt | Control | Horizon (s) | N | SR (%) | SafeSR (%) | SPL | Collisions | Safety score |')
+    print('| --- | --- | --- | --- | ---: | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |')
     for r in summarize(rows):
-        print(f"| {r['model']} | {r['difficulty']} | {r['mode']} | {r['effort']} | {r['episodes']} | {r['sr_percent']:.1f} | {r['safe_sr_percent']:.1f} | {r['spl']:.3f} | {r['collisions']:.2f} | {r['safety_score']:.2f} |")
+        print(f"| {r['model']} | {r['difficulty']} | {r['mode']} | {r['effort']} | {r['fixed_thinking_seconds'] if r['fixed_thinking_seconds'] is not None else 'measured'} | {r['prompt_timing_mode']} | {r['control_mode']} | {r['stationary_horizon_seconds']} | {r['episodes']} | {r['sr_percent']:.1f} | {r['safe_sr_percent']:.1f} | {r['spl']:.3f} | {r['collisions']:.2f} | {r['safety_score']:.2f} |")
 
 if __name__=='__main__':main()

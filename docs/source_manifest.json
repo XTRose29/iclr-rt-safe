@@ -948,7 +948,7 @@
     {
       "path": "evaluation/run_qwen3vl8b_all_maps.py",
       "september_sha256": "a3fed49d2ad69542697de4c887b4f711519dfb8af0a3521de64667d4a348185d",
-      "release_sha256": "96b98eeb376a8b7b644cf0bb0ec52cd26898b99de18a18f7674f6aa26e21011f",
+      "release_sha256": "91869f8ff908d66f3fb613d2b04d5406130ec77d69453eb50120150e19511e19",
       "changes": [
         "Local deployment paths replaced with repository-relative or environment-configurable paths; benchmark logic unchanged."
       ],

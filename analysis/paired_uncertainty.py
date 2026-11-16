@@ -12,6 +12,12 @@ def compute(rows,draws=10000,seed=20261106):
         raise ValueError('Select records from one runtime protocol.')
     if len({r['seed'] for r in rows})!=1 or len({r['difficulty'] for r in rows})!=1:
         raise ValueError('Select one seed and difficulty before paired analysis.')
+    for field in ('fixed_thinking_seconds', 'prompt_timing_mode', 'control_mode', 'stationary_horizon_seconds'):
+        for model in {r['model'] for r in rows}:
+            values = {str(r.get(field)) if r.get(field) not in (None, '') else ''
+                      for r in rows if r['model'] == model}
+            if len(values) != 1:
+                raise ValueError(f'Select matching {field} conditions within each model.')
     models=sorted({r['model'] for r in rows});routes=sorted({int(r['task_id']) for r in rows})
     index={}
     efforts={}

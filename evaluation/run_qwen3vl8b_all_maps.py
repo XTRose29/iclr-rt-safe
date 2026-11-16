@@ -212,6 +212,27 @@ def git_source_state(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
         )
         return completed.stdout.strip()
 
+    if not (repo_root / ".git").exists():
+        source_files = {p for p in repo_root.iterdir()
+                        if p.is_file() and p.suffix in {".py", ".json", ".yaml", ".yml", ".txt"}}
+        for directory in ("SimWorld", "analysis", "base", "configs", "data",
+                          "evaluation", "llm", "manager", "scripts", "utils", "tests"):
+            source_files.update(p for p in (repo_root / directory).rglob("*")
+                                if p.is_file() and p.suffix in {".py", ".json", ".yaml", ".yml", ".txt"}
+                                and "__pycache__" not in p.parts)
+        hashes = {p.relative_to(repo_root).as_posix(): sha256_file(p)
+                  for p in sorted(source_files)}
+        if not hashes:
+            raise RuntimeError("No source files found in the extracted release")
+        digest = hashlib.sha256(json.dumps(hashes, sort_keys=True).encode("utf-8")).hexdigest()
+        return {
+            "source_type": "archive",
+            "commit": None,
+            "tracked_worktree_clean": None,
+            "source_tree_sha256": digest,
+            "source_file_sha256": hashes,
+        }
+
     status = git("status", "--porcelain", "--untracked-files=no")
     return {
         "commit": git("rev-parse", "HEAD"),
@@ -258,7 +279,7 @@ def build_source_provenance(
     }
     model_path = Path(args.qwen_model_path).expanduser().resolve()
     return {
-        "version": "committed_source_and_inputs_v1",
+        "version": "source_and_inputs_v2",
         "repository": git_source_state(repo_root),
         "authoritative_input_sha256": input_hashes,
         "ue_launcher_and_manifest_sha256": ue_hashes,
@@ -272,6 +293,10 @@ def build_source_provenance(
 
 def require_clean_source(provenance: dict[str, Any]) -> None:
     repository = provenance.get("repository") or {}
+    if (repository.get("source_type") == "archive"
+            and repository.get("source_tree_sha256")
+            and repository.get("source_file_sha256")):
+        return
     if repository.get("tracked_worktree_clean") is not True:
         raise RuntimeError(
             "Refusing benchmark rollout from a dirty tracked worktree. "
@@ -2047,6 +2072,7 @@ def write_agent_config(path: Path, args: argparse.Namespace) -> None:
                     "provider": "self-hosted",
                     "url": args.qwen_url,
                     "reasoning": args.enable_thinking,
+                    "reasoning_effort": effort,
                     "max_tokens": args.qwen_max_tokens,
                     "temperature": 0.7,
                     "top_p": 1.0,
