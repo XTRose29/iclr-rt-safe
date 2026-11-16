@@ -12,7 +12,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Live runs also require a compatible RT-SAFE Unreal runtime with UnrealCV, native swept movement, and maps RT10/12/15/18/20; these assets are not included. Keep rendering enabled.
+The executable, packaged Blueprints and all five maps are available as a separate pinned Linux download. Follow the [environment setup and model-free check](docs/ENVIRONMENT.md) before running a model. An Unreal editor is not required. Keep rendering enabled.
 
 ## Run
 
@@ -25,7 +25,8 @@ python scripts/run_paper.py --model Gemini --study rq2 --task-ids 0
 Set `OPENROUTER_API_KEY` for Gemini, then run:
 
 ```bash
-export SIMWORLD_UE_LAUNCHER=/path/to/runtime/SimWorld.sh
+export SIMWORLD_UE_LAUNCHER="$PWD/runtime/Linux/SimWorld.sh"
+export SIMWORLD_TIME_ADVANCE_MODE=resume_pause
 python scripts/run_paper.py --model Gemini --study rq2 --task-ids 0 --execute
 ```
 
